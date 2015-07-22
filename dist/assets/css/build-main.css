@@ -1,0 +1,79 @@
+	/* ------ !!!!!! VERY IMPORTANT PLEASE READ !!!!!! ------ */
+	/* ------
+		  PLEASE NOTE: BUILDING FOR MOBILE FIRST
+		  - SMALL STYLES HAVE NO MEDIA QUERIES  
+		  - ANY STYLE CHANGES FOR 480 AND ABOVE = MEDIA QUERIES
+	-----*/
+
+	body, html	{ margin:0px; padding:0px; font-family: Verdana, Geneva, sans-serif; }
+	a { text-decoration: none; }
+	a:link, a:visited { color: #333; }
+	p { margin:0;padding:0; }
+	
+	.allCaps {
+		text-transform: uppercase;
+	}
+
+
+/* ------ BEGIN MEDIA QUERIES ------ */
+/* ------ TRY TO BE SPARING WITH THESE ------ */
+
+	@media (min-width: 480px) {
+	}
+   /* @media (min-width: 550px) {*/
+   	@media (min-width: 570px) {
+
+	}
+	@media (min-width: 748px) {
+
+	}
+	@media (min-width: 960px) {
+	}
+
+;
+/* ------ BEGIN HEADER ------ */
+	header { 
+		width: 100%;
+		background-color: white;
+	}
+	header .logo {
+		width:50%;
+		display:block;
+		margin:0 auto;
+	}
+	#navigation {
+		background-color:#f7f7f7;
+		padding:20px 0;
+		color:#666;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+	}
+	.pageLinks {
+		padding:0 10px;
+		color:#666;
+	}
+	.pageLinks a:link, a:visited {
+	    color: #666;
+	}
+	.footerLinks { color: #666; }
+	footer {
+		text-align: center;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+/* ------ BEGIN MEDIA QUERIES ------ */
+/* ------ TRY TO BE SPARING WITH THESE ------ */
+
+	@media (min-width: 480px) {
+	}
+   /* @media (min-width: 550px) {*/
+   	@media (min-width: 570px) {
+
+	}
+	@media (min-width: 748px) {
+
+	}
+	@media (min-width: 960px) {
+	}

@@ -1,0 +1,78 @@
+<<<<<<< HEAD
+=======
+var timeline;
+var APP = {
+        chapters: [{
+            id: 1,
+            name: "Out of Africa",
+            startDate: "2013\/01\/10",
+            endDate: "2015\/01\/01"
+        }, {
+            id: 2,
+            name: "Abraham’s Walk",
+            startDate: "2015\/01\/01",
+            endDate: "2015\/06\/01"
+        }, {
+            id: 3,
+            name: "The Genesis of Empathy",
+            startDate: "2015\/06\/01",
+            endDate: "2016\/01\/01"
+        }, {
+            id: 4,
+            name: "The Lessons of the Silk Road",
+            startDate: "2016\/01\/01",
+            endDate: "2016\/06\/01"
+        }, {
+            id: 5,
+            name: "A Treasury of Tongues",
+            startDate: "2016\/06\/01",
+            endDate: "2017\/01\/01"
+        }, {
+            id: 6,
+            name: "Walking with Reindeer",
+            startDate: "2017\/01\/01",
+            endDate: "2017\/06\/01"
+        }, {
+            id: 7,
+            name: "Beringia—the Cold Bridge",
+            startDate: "2017\/06\/01",
+            endDate: "2018\/01\/01"
+        }, {
+            id: 8,
+            name: "A World Once Called 'New'",
+            startDate: "2018\/01\/01",
+            endDate: "2018\/06\/01"
+        }, {
+            id: 9,
+            name: "Onward, Over the Horizon",
+            startDate: "2018\/06\/01",
+            endDate: "2019\/01\/01"
+        }, {
+            id: 10,
+            name: "Beyond the Tip of the World",
+            startDate: "2019\/01\/01",
+            endDate: "2020\/01\/01"
+        }],
+    activeDate: null
+}
+
+
+
+$(document).ready(function() {
+
+    // load timeline
+    timeline = new Timeline("timelineHolder", 30000);
+
+    // load map after data
+    queue()
+        .defer(d3.json, "./assets/data/world.json")
+        .defer(d3.json, "./assets/data/ryan_ooew.geojson")
+        .defer(d3.json, "./assets/data/milestones.json")
+        .defer(d3.json, "./assets/data/dispatches.json")
+        .await(initCompassMap);
+
+    //compass control events
+    initCompassControl();
+
+});
+>>>>>>> master

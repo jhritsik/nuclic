@@ -1,0 +1,17 @@
+
+
+    <!-- build:css({app,.tmp}) ./assets/css/style-{{ page.embedId }}.css -->
+    {{#each page.embedCss }}
+    <link rel="stylesheet" href="./assets/css/{{this}}">
+    {{/each}}
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) ./assets/js/script-{{ page.embedId }}.js -->
+    {{#each page.embedJs }}
+    <script src="./assets/js/{{this}}"></script>
+    {{/each}}
+    <!-- endbuild -->
+    
+    {{> body }}
+
+

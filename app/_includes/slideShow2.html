@@ -1,0 +1,35 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<style>
+.cycle-slideshow { width: 100% }
+.cycle-slideshow img { width: 100%; height: auto }
+/* pager */
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; bottom: 10px; overflow: hidden;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #D69746;}
+.cycle-pager > * { cursor: pointer;}
+</style>
+<br />
+<div class="cycle-slideshow"
+    data-cycle-fx="scrollHorz"
+    data-cycle-auto-height="4:2"
+    data-cycle-prev=".prevControl"
+    data-cycle-next=".nextControl"
+
+    >
+    <div class="cycle-pager"></div>
+    <img src="http://malsup.github.io/images/p1.jpg">
+    <img src="http://malsup.github.io/images/p2.jpg">
+    <img src="http://malsup.github.io/images/p3.jpg">
+    <img src="http://malsup.github.io/images/p4.jpg">
+</div>
+<div class=center>
+    <span class="prevControl"> << Prev </span>
+    <span class="nextControl"> Next >> </span>
+</div>
+

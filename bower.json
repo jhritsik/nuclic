@@ -1,0 +1,12 @@
+{
+  "name": "special-projects",
+  "version": "0.0.0",
+  "ignore": "",
+  "dependencies": {
+    "jquery": "1.11.1",
+    "jquery-dfp": "git+https://github.com/natgeo/jquery.dfp.js#1.1.1",
+    "matchMedia": "~0.2.0",
+    "moment": "~2.10.3",
+    "hammer.js": "~2.0.4"
+  }
+}

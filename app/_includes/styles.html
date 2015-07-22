@@ -1,0 +1,9 @@
+<!-- build:css({app,.tmp}) ./assets/css/build-{{ page.id }}.css -->
+{{#each page.pageCss }}
+<link rel="stylesheet" href="./assets/css/{{this}}">
+{{/each}}
+<link rel="stylesheet" href="./assets/css/base.css">
+<link rel="stylesheet" href="./assets/css/project.css">
+<!-- endbuild -->
+
+<!-- <link rel="stylesheet" href="https://fonts.ngeo.com/hoefler/1-0-1/hco_fonts.css"> -->
