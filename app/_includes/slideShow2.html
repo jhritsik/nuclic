@@ -1,25 +1,176 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+
 <style>
-.cycle-slideshow { width: 100% }
-.cycle-slideshow img { width: 100%; height: auto }
-/* pager */
-.cycle-pager { 
-    text-align: center; width: 100%; z-index: 500; position: absolute; bottom: 10px; overflow: hidden;
-}
-.cycle-pager span { 
-    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
-    display: inline-block; color: #ddd; cursor: pointer; 
-}
-.cycle-pager span.cycle-pager-active { color: #D69746;}
-.cycle-pager > * { cursor: pointer;}
+    .cycle-slideshow { width: 100% }
+    .cycle-slideshow img { width: 100%; height: auto }
+
+    /* pager */
+    .cycle-pager { 
+        text-align: center; width: 100%; z-index: 500; position: absolute; bottom: 10px; overflow: hidden;
+    }
+    .cycle-pager span { 
+        font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+        display: inline-block; color: #ddd; cursor: pointer; 
+    }
+    .cycle-pager span.cycle-pager-active { color: #aeaeae;}
+    .cycle-pager > * { cursor: pointer; margin-right:10px;}
+
+    .prevControl, .nextControl {
+      position: absolute;
+      top: 47%;
+      z-index: 9999;
+      width: 15px;
+    }
+    .prevControl {
+        left:0;
+        margin-left:10px;
+    }
+    .nextControl {
+        right:0;
+        margin-right:10px;
+    }
+
+    /* jaimes css */
+    .slideShowCircle {
+        position: absolute;
+        top: 40%;
+        z-index: 9999;
+        /*width: 20px;
+        border:0px solid green;
+        width:100px;
+        height:100px;
+        -webkit-border-radius: 100px;
+        background: #fff;
+        opacity:0.2;*/
+    }
+    #leftSlideShowCircle {
+        left:0;
+        width: 50px;
+        height: 100px; /* as the half of the width */
+        background-color: #fff;
+        opacity:0.2;
+        border-top-right-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
+        border: 0px solid gray;
+        border-bottom: 0;
+    }
+    #rightSlideShowCircle {
+        right:0;
+        width: 50px;
+        height: 100px; /* as the half of the width */
+        background-color: #fff;
+        opacity:0.2;
+        border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
+        border: 0px solid gray;
+        border-bottom: 0;
+    }
+    #slideShowTitle {
+        position: absolute;
+        z-index: 999;
+        bottom: 0;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        color:white;
+    }
+    #slideShowTitle h1 { 
+        font-family: Verdana, Geneva, sans-serif;
+        font-size:14px;
+    }
+    .circleBox {
+        float:left;
+        width:20%;
+        border:1px solid #aeaeae;
+        margin-left:10px;
+    }
+    .round {
+        border:1px solid green;
+        width:100px;
+        height:100px;
+        -webkit-border-radius: 100px;
+    }
+    .insideCircleBox {
+        margin-left:20%;
+    }
+    .circleBox p:nth-child(2), .circleBox p:nth-child(3), .circleBox p:nth-child(4) {
+        font-size:11px;
+        color:#666;
+        margin-bottom:10px;
+    }
+    .circleBox p.colorTag {
+        margin-bottom:10px;
+        margin-top:20px;
+    }
+    .environment .round {
+        border:1px solid #66E0FF;
+        opacity: 0.4;
+    }
+    .environment p.colorTag {
+        color:#66E0FF;
+    }
+    .maintenance .round {
+        border:1px solid #66FF66;
+        opacity:0.2;
+    }
+    .maintenance p.colorTag {
+        color:#66FF66;
+    }
+    .durable .round {
+        border:1px solid #666;
+        opacity: 0.4;
+    }
+    .durable p.colorTag {
+        color:#666;
+    }
+    .safe .round {
+        border:2px solid #FFD699;
+        opacity: 0.4;
+    }
+    .safe p.colorTag {
+        color: #FFD699;
+    }
+
+    section {
+        width:90%;
+        padding:20px;
+        font-size:12px;
+        line-height: 22px;
+        color:#666;
+    }
+
+    @media (min-width: 480px) {
+        section {
+            width:65%;
+            padding:50px 0 50px 60px;
+            font-size:12px;
+            line-height: 22px;
+            color:#666;
+        }
+        #slideShowTitle h1 { 
+            font-family: Verdana, Geneva, sans-serif;
+            font-size:28px;
+        }
+    }
+   /* @media (min-width: 550px) {*/
+    @media (min-width: 570px) {
+
+    }
+    @media (min-width: 748px) {
+
+    }
+    @media (min-width: 960px) {
+    }
+
+
 </style>
 <br />
 <div class="cycle-slideshow"
+    data-cycle-speed="1000" 
+    data-cycle-timeout="600000"
     data-cycle-fx="scrollHorz"
     data-cycle-auto-height="4:2"
     data-cycle-prev=".prevControl"
     data-cycle-next=".nextControl"
+    data-cycle-loader="wait"
 
     >
     <div class="cycle-pager"></div>
@@ -27,9 +178,66 @@
     <img src="http://malsup.github.io/images/p2.jpg">
     <img src="http://malsup.github.io/images/p3.jpg">
     <img src="http://malsup.github.io/images/p4.jpg">
-</div>
-<div class=center>
-    <span class="prevControl"> << Prev </span>
-    <span class="nextControl"> Next >> </span>
-</div>
 
+    <div id="leftSlideShowCircle" class="slideShowCircle"></div>
+    <div id="rightSlideShowCircle" class="slideShowCircle"></div>
+    <span class="prevControl"><img src="./assets/img/arrow_black_left.png" /></span>
+    <span class="nextControl"><img src="./assets/img/arrow_black_right.png" /></span>
+
+    <div id="slideShowTitle">
+        <h1>CYC America<br />Flooring Company</h1>
+    </div>
+
+</div>
+<!--
+<div>
+    <span class="prevControl"> << Prev <img src="./assets/img/arrow_left.png" /></span>
+    <span class="nextControl"> Next >> <img src="./assets/img/arrow_right.png" /></span>
+</div>
+-->
+
+    <section>
+        <p>You can experience upgraded elegance as well ast he sense of pleasure and comfort just as you would do in nature. The floors are manufactured to the trendy taste of today's consumers who value natural purity, eco-friendliness nand high functionality, offers ample choice of a wide variety of products that can bring you a new life style together with pleasant adn comfortable living environment.</p>
+    </section>
+
+    <div class="circles">
+        <div class="circleBox environment">
+            <div class="round"></div>
+            <div class="insideCircleBox">
+                <p class="colorTag">environmentally<br />friendly</p>
+                <p>Anti-Fungal, anti-bacterial Nano Silver Sterilization
+                Technology.</p>
+                <p>No-buff floors means no bacteria, dust or wax particles are thrown into the air during cleaning process.</p>
+                <p>No odors from floor finish or strippers: no cleaning agents expelled into environment.</p>
+            </div>
+        </div>
+        <div class="circleBox maintenance">
+            <div class="round"></div>
+            <div class="insideCircleBox">
+                <p class="colorTag">low<br />maintenance</p>
+                <p>Easily cleaned by damp mopping or auto-scrubbing.</p>
+                <p>Maintenance savings in investment payback in a few years.</p>
+            </div>
+        </div>
+        <div class="circleBox durable">
+            <div class="round"></div>
+            <div class="insideCircleBox">
+                <p class="colorTag">durable<br />&nbsp;</p>
+                <p>No Sealer, finishes or spray-buffing needed.</p>
+                <p>Proprietary high quality embossed wear layer.</p>
+            </div>
+        </div>
+        <div class="circleBox safe">
+            <div class="round"></div>
+            <div class="insideCircleBox">
+                <p class="colorTag">safe<br />&nbsp;</p>
+                <p>Static Coefficient of Friction (dry score of 0.81; wet score of 0.56).</p>
+            </div>
+        </div>
+        <div id="halfDurable" class="circleBox durable">
+            <div class="round"></div>
+            <p>&nbsp;<br />&nbsp;</p>
+        </div>
+    </div>
+
+    <div style="clear:both;"></div>

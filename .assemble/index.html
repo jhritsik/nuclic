@@ -77,229 +77,250 @@ jaime is testing this
 
 <div id="app">
    	
-	<style>
+	
+<style>
+    .cycle-slideshow { width: 100% }
+    .cycle-slideshow img { width: 100%; height: auto }
 
-	.section {}
-	.slide {
-		background-size: cover;
-		background-image: url(http://dubaifurniture.co/wp-content/uploads/2014/05/Engineered_wood_flooring_in_a_art_gallery_supplied_by_Inspire_Flooring_Aberdeen.jpg);
-		padding: 6% 0 0 0;
-	}
+    /* pager */
+    .cycle-pager { 
+        text-align: center; width: 100%; z-index: 500; position: absolute; bottom: 10px; overflow: hidden;
+    }
+    .cycle-pager span { 
+        font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+        display: inline-block; color: #ddd; cursor: pointer; 
+    }
+    .cycle-pager span.cycle-pager-active { color: #aeaeae;}
+    .cycle-pager > * { cursor: pointer; margin-right:10px;}
+
+    .prevControl, .nextControl {
+      position: absolute;
+      top: 47%;
+      z-index: 9999;
+      width: 15px;
+    }
+    .prevControl {
+        left:0;
+        margin-left:10px;
+    }
+    .nextControl {
+        right:0;
+        margin-right:10px;
+    }
+
+    /* jaimes css */
+    .slideShowCircle {
+        position: absolute;
+        top: 40%;
+        z-index: 9999;
+        /*width: 20px;
+        border:0px solid green;
+        width:100px;
+        height:100px;
+        -webkit-border-radius: 100px;
+        background: #fff;
+        opacity:0.2;*/
+    }
+    #leftSlideShowCircle {
+        left:0;
+        width: 50px;
+        height: 100px; /* as the half of the width */
+        background-color: #fff;
+        opacity:0.2;
+        border-top-right-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
+        border: 0px solid gray;
+        border-bottom: 0;
+    }
+    #rightSlideShowCircle {
+        right:0;
+        width: 50px;
+        height: 100px; /* as the half of the width */
+        background-color: #fff;
+        opacity:0.2;
+        border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
+        border: 0px solid gray;
+        border-bottom: 0;
+    }
+    #slideShowTitle {
+        position: absolute;
+        z-index: 999;
+        bottom: 0;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        color:white;
+    }
+    #slideShowTitle h1 { 
+        font-family: Verdana, Geneva, sans-serif;
+        font-size:14px;
+    }
+    .circleBox {
+        float:left;
+        width:20%;
+        border:1px solid #aeaeae;
+        margin-left:10px;
+    }
+    .round {
+        border:1px solid green;
+        width:100px;
+        height:100px;
+        -webkit-border-radius: 100px;
+    }
+    .insideCircleBox {
+        margin-left:20%;
+    }
+    .circleBox p:nth-child(2), .circleBox p:nth-child(3), .circleBox p:nth-child(4) {
+        font-size:11px;
+        color:#666;
+        margin-bottom:10px;
+    }
+    .circleBox p.colorTag {
+        margin-bottom:10px;
+        margin-top:20px;
+    }
+    .environment .round {
+        border:1px solid #66E0FF;
+        opacity: 0.4;
+    }
+    .environment p.colorTag {
+        color:#66E0FF;
+    }
+    .maintenance .round {
+        border:1px solid #66FF66;
+        opacity:0.2;
+    }
+    .maintenance p.colorTag {
+        color:#66FF66;
+    }
+    .durable .round {
+        border:1px solid #666;
+        opacity: 0.4;
+    }
+    .durable p.colorTag {
+        color:#666;
+    }
+    .safe .round {
+        border:2px solid #FFD699;
+        opacity: 0.4;
+    }
+    .safe p.colorTag {
+        color: #FFD699;
+    }
+
+    section {
+        width:90%;
+        padding:20px;
+        font-size:12px;
+        line-height: 22px;
+        color:#666;
+    }
+
+    @media (min-width: 480px) {
+        section {
+            width:65%;
+            padding:50px 0 50px 60px;
+            font-size:12px;
+            line-height: 22px;
+            color:#666;
+        }
+        #slideShowTitle h1 { 
+            font-family: Verdana, Geneva, sans-serif;
+            font-size:28px;
+        }
+    }
+   /* @media (min-width: 550px) {*/
+    @media (min-width: 570px) {
+
+    }
+    @media (min-width: 748px) {
+
+    }
+    @media (min-width: 960px) {
+    }
 
 
-	.fp-section {
-	    position: relative;
-	    -webkit-box-sizing: border-box; 
-	    -moz-box-sizing: border-box;
-	    box-sizing: border-box;
-	}
-	.fp-slide {
-	    float: left;
-	}
-	.fp-slide, .fp-slidesContainer {
-	    height: 100%;
-	    display: block;
-	}
-	.fp-slides {
-	    z-index:1;
-	    height: 100%;
-	    overflow: hidden;
-	    position: relative;
-	    -webkit-transition: all 0.3s ease-out; 
-	    transition: all 0.3s ease-out;
-	}
-	.fp-section.fp-table, .fp-slide.fp-table {
-	    display: table;
-	    table-layout:fixed;
-	    width: 100%;
-	}
-	.fp-tableCell {
-	    display: table-cell;
-	    vertical-align: middle;
-	    width: 100%;
-	    height: 100%;
-	}
-	.fp-slidesContainer {
-	    float: left;
-	    position: relative;
-	}
-	.fp-controlArrow {
-	    position: absolute;
-	    z-index: 4;
-	    top: 50%;
-	    cursor: pointer;
-	    width: 0;
-	    height: 0;
-	    border-style: solid;
-	    margin-top: -38px;
-	    -webkit-transform: translate3d(0,0,0);
-	    -ms-transform: translate3d(0,0,0);
-	    transform: translate3d(0,0,0);
-	}
-	.fp-controlArrow.fp-prev {
-	    left: 15px;
-	    width: 0;
-	    border-width: 38.5px 34px 38.5px 0;
-	    border-color: transparent #fff transparent transparent;
-	}
-	.fp-controlArrow.fp-next {
-	    right: 15px;
-	    border-width: 38.5px 0 38.5px 34px;
-	    border-color: transparent transparent transparent #fff;
-	}
-	.fp-scrollable {
-	    overflow: scroll;
-	}
-	.fp-notransition {
-	    -webkit-transition: none !important;
-	    transition: none !important;
-	}
-	#fp-nav {
-	    position: fixed;
-	    z-index: 100;
-	    margin-top: -32px;
-	    top: 50%;
-	    opacity: 1;
-	    -webkit-transform: translate3d(0,0,0);
-	}
-	#fp-nav.right {
-	    right: 17px;
-	}
-	#fp-nav.left {
-	    left: 17px;
-	}
-	.fp-slidesNav{
-	    position: absolute;
-	    z-index: 4;
-	    left: 50%;
-	    opacity: 1;
-	}
-	.fp-slidesNav.bottom {
-	    bottom: 17px;
-	}
-	.fp-slidesNav.top {
-	    top: 17px;
-	}
-	#fp-nav ul,
-	.fp-slidesNav ul {
-	  margin: 0;
-	  padding: 0;
-	}
-	#fp-nav ul li,
-	.fp-slidesNav ul li {
-	    display: block;
-	    width: 14px;
-	    height: 13px;
-	    margin: 7px;
-	    position:relative;
-	}
-	.fp-slidesNav ul li {
-	    display: inline-block;
-	}
-	#fp-nav ul li a,
-	.fp-slidesNav ul li a {
-	    display: block;
-	    position: relative;
-	    z-index: 1;
-	    width: 100%;
-	    height: 100%;
-	    cursor: pointer;
-	    text-decoration: none;
-	}
-	#fp-nav ul li a.active span,
-	.fp-slidesNav ul li a.active span,
-	#fp-nav ul li:hover a.active span,
-	.fp-slidesNav ul li:hover a.active span{
-	    height: 12px;
-	    width: 12px;
-	    margin: -6px 0 0 -6px;
-	    border-radius: 100%;
-	 }
-	#fp-nav ul li a span,
-	.fp-slidesNav ul li a span {
-	    border-radius: 50%;
-	    position: absolute;
-	    z-index: 1;
-	    height: 4px;
-	    width: 4px;
-	    border: 0;
-	    background: #333;
-	    left: 50%;
-	    top: 50%;
-	    margin: -2px 0 0 -2px;
-	    -webkit-transition: all 0.1s ease-in-out;
-	    -moz-transition: all 0.1s ease-in-out;
-	    -o-transition: all 0.1s ease-in-out;
-	    transition: all 0.1s ease-in-out;
-	}
-	#fp-nav ul li:hover a span,
-	.fp-slidesNav ul li:hover a span{
-	    width: 10px;
-	    height: 10px;
-	    margin: -5px 0px 0px -5px;
-	}
-
-	/* jaimes css */
-	h1 { font-family: Verdana, Geneva, sans-serif;}
-	.circleBox {
-		float:left;
-	  	width:20%;
-	  	border:1px solid #aeaeae;
-	}
-	.round {
-		border:2px solid green;
-		width:100px;
-		height:100px;
-	  	-webkit-border-radius: 100px;
-	}
-	.round.environment {
-		border:2px solid green;
-	}
-	.round.maintenance {
-		border:2px solid blue;
-	}
-	.round.durable {
-		border:2px solid black;
-	}
-	.round.safe {
-		border:2px solid yellow;
-	}
 </style>
+<br />
+<div class="cycle-slideshow"
+    data-cycle-speed="1000" 
+    data-cycle-timeout="600000"
+    data-cycle-fx="scrollHorz"
+    data-cycle-auto-height="4:2"
+    data-cycle-prev=".prevControl"
+    data-cycle-next=".nextControl"
+    data-cycle-loader="wait"
 
+    >
+    <div class="cycle-pager"></div>
+    <img src="http://malsup.github.io/images/p1.jpg">
+    <img src="http://malsup.github.io/images/p2.jpg">
+    <img src="http://malsup.github.io/images/p3.jpg">
+    <img src="http://malsup.github.io/images/p4.jpg">
 
-<div id="fullpage">
-	<div class="section" id="section0">
-	    <div class="slide active"><h1>CYA America <br />Flooring Company</h1></div>
-	    <div class="slide"><h1>Environmentally friendly</h1></div>
-	    <div class="slide"><h1>low maintenance</h1></div>
-	    <div class="slide"><h1>durable</h1></div>
-	    <div class="slide"><h1>safe</h1></div>
-	</div>
+    <div id="leftSlideShowCircle" class="slideShowCircle"></div>
+    <div id="rightSlideShowCircle" class="slideShowCircle"></div>
+    <span class="prevControl"><img src="./assets/img/arrow_black_left.png" /></span>
+    <span class="nextControl"><img src="./assets/img/arrow_black_right.png" /></span>
 
-	<section>
-		<p>You can experience upgraded elegance as well ast he sense of pleasure and comfort just as you would do in nature. The floors are manufactured to the trendy taste of today's consumers who value natural purity, eco-friendliness nand high functionality, offers ample choice of a wide variety of products that can bring you a new life style together with pleasant adn comfortable living environment.</p>
-	</section>
+    <div id="slideShowTitle">
+        <h1>CYC America<br />Flooring Company</h1>
+    </div>
 
-	<div class="section" id="section1">
-		<h1>No wraps, no extra markup</h1>
-		<div class="circleBox">
-			<div class="round environment"></div>
-			<p>environmentally<br />friendly</p>
-		</div>
-		<div class="circleBox">
-			<div class="round maintenance"></div>
-			<p>low<br />maintenance</p>
-		</div>
-		<div class="circleBox">
-			<div class="round durable"></div>
-			<p>durable<br />&nbsp;</p>
-		</div>
-		<div class="circleBox">
-			<div class="round safe"></div>
-			<p>safe<br />&nbsp;</p>
-		</div>
-	</div>
 </div>
+<!--
+<div>
+    <span class="prevControl"> << Prev <img src="./assets/img/arrow_left.png" /></span>
+    <span class="nextControl"> Next >> <img src="./assets/img/arrow_right.png" /></span>
+</div>
+-->
+
+    <section>
+        <p>You can experience upgraded elegance as well ast he sense of pleasure and comfort just as you would do in nature. The floors are manufactured to the trendy taste of today's consumers who value natural purity, eco-friendliness nand high functionality, offers ample choice of a wide variety of products that can bring you a new life style together with pleasant adn comfortable living environment.</p>
+    </section>
+
+    <div class="circles">
+        <div class="circleBox environment">
+            <div class="round"></div>
+            <div class="insideCircleBox">
+                <p class="colorTag">environmentally<br />friendly</p>
+                <p>Anti-Fungal, anti-bacterial Nano Silver Sterilization
+                Technology.</p>
+                <p>No-buff floors means no bacteria, dust or wax particles are thrown into the air during cleaning process.</p>
+                <p>No odors from floor finish or strippers: no cleaning agents expelled into environment.</p>
+            </div>
+        </div>
+        <div class="circleBox maintenance">
+            <div class="round"></div>
+            <div class="insideCircleBox">
+                <p class="colorTag">low<br />maintenance</p>
+                <p>Easily cleaned by damp mopping or auto-scrubbing.</p>
+                <p>Maintenance savings in investment payback in a few years.</p>
+            </div>
+        </div>
+        <div class="circleBox durable">
+            <div class="round"></div>
+            <div class="insideCircleBox">
+                <p class="colorTag">durable<br />&nbsp;</p>
+                <p>No Sealer, finishes or spray-buffing needed.</p>
+                <p>Proprietary high quality embossed wear layer.</p>
+            </div>
+        </div>
+        <div class="circleBox safe">
+            <div class="round"></div>
+            <div class="insideCircleBox">
+                <p class="colorTag">safe<br />&nbsp;</p>
+                <p>Static Coefficient of Friction (dry score of 0.81; wet score of 0.56).</p>
+            </div>
+        </div>
+        <div id="halfDurable" class="circleBox durable">
+            <div class="round"></div>
+            <p>&nbsp;<br />&nbsp;</p>
+        </div>
+    </div>
+
+    <div style="clear:both;"></div>
+
 
 	
 
@@ -311,14 +332,13 @@ jaime is testing this
 <script>window.jQuery || document.write('<script src="./assets/bower_components/jquery/dist/jquery.min.js"><\/script>')</script> -->
 
 <script src="./assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
 
 <!-- build:js({app,.tmp}) ./assets/js/script-main.js -->
 
 <script src="./assets/bower_components/moment/moment.js"></script>
 
 <script src="./assets/bower_components/hammer.js/hammer.js"></script>
-
-<script src="./assets/bower_components/fullpage.js/jquery.fullPage.js"></script>
 
 <script src="./assets/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
 
