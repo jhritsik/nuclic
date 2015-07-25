@@ -5573,4 +5573,18 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
 
 })(window, document, 'Hammer');
 ;
+$(document).ready(function(){
+	/*$('#fullpage').fullpage({
+				fitToSection:false,
+				autoScrolling: false,
+				slidesNavigation:true
+				//scrollOverflow: true
 
+			});*/
+	$( '#mobileNavIconCon' ).click(function(){
+		$('.responsive-menu').slideToggle();
+	})
+
+
+});
+ 
