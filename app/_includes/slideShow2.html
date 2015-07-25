@@ -1,5 +1,6 @@
 
 <style>
+    body { overflow-x:hidden; }
     .cycle-slideshow { width: 100% }
     .cycle-slideshow img { width: 100%; height: auto }
 
@@ -34,13 +35,7 @@
         position: absolute;
         top: 40%;
         z-index: 9999;
-        /*width: 20px;
-        border:0px solid green;
-        width:100px;
-        height:100px;
-        -webkit-border-radius: 100px;
-        background: #fff;
-        opacity:0.2;*/
+        display:none;
     }
     #leftSlideShowCircle {
         left:0;
@@ -76,17 +71,40 @@
         font-family: Verdana, Geneva, sans-serif;
         font-size:14px;
     }
+    .circles {
+        width:130%;
+        overflow: auto;
+        border:1px solid red;
+    }
     .circleBox {
         float:left;
-        width:20%;
+        width:16%;
         border:1px solid #aeaeae;
-        margin-left:10px;
+        margin-right: 13px;
+    }
+    .halfCircleBox {
+        width:7%;
+        margin-right:0px;
+    }
+    .circleBox:nth-of-type(1) {
+        margin-left:20px;
     }
     .round {
         border:1px solid green;
-        width:100px;
-        height:100px;
+        width:130px;
+        height:130px;
         -webkit-border-radius: 100px;
+    }
+    .halfRound {
+        width: 65px;
+        height: 130px; /* as the half of the width */
+        background-color: #fff;
+        opacity:0.2;
+        border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
+        border:1px solid #666;
+        opacity: 0.4;
+
     }
     .insideCircleBox {
         margin-left:20%;
@@ -148,6 +166,9 @@
         #slideShowTitle h1 { 
             font-family: Verdana, Geneva, sans-serif;
             font-size:28px;
+        }
+        .slideShowCircle {
+            display:block;
         }
     }
    /* @media (min-width: 550px) {*/
@@ -237,7 +258,7 @@
                 <p>Static Coefficient of Friction (dry score of 0.81; wet score of 0.56).</p>
             </div>
         </div>
-        <div id="halfDurable" class="circleBox durable">
+        <div class="circleBox durable">
             <div class="round"></div>
             <p>&nbsp;<br />&nbsp;</p>
         </div>
