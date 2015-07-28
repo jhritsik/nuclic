@@ -6,10 +6,6 @@ $(document).ready(function(){
 				//scrollOverflow: true
 
 			});*/
-	$( '#mobileNavIconCon' ).click(function(){
-		$('.responsive-menu').slideToggle();
-	})
-
 
 });
 

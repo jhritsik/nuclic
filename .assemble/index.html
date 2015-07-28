@@ -22,55 +22,34 @@
 		float:left;
 		margin-top:2%;
 	}
-	#headerTop {clear:both;width:100%;height:100%;border:1px dashed purple;}
-	/* RESPONSIVE MOBILE NAVIGATION */
-	.responsive-menu {width:100%;border:1px dotted purple;overflow: hidden;background-color: #ebebeb;padding:0px;}
-	.responsive-menu ul {list-style-type: none;float:left;margin:0;padding:0;width:100%;}
-	.responsive-menu ul li {line-height: 40px;border:1px solid red;width:100%;}
-	#mobileNavIconCon {border:1px solid green;overflow: hidden;height:100%;width:25%;float:right;background-color: #ebebeb}
-	#mobileNavIcon {float:right;background-color: #ebebeb;width:30%;margin-right:35%;margin-top: 20%;}
+	#largeNavigation {display:none;}
 
 
+	@media (min-width: 600px) {
+		#largeNavigation {display:block;}
+    }
 </style>
 <header>
 	<!--<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>-->
-
-<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>
-	<div id="navigation">
-		<span class="pageLinks page1"> 
-	    	<a href="inspirations.html">Inspirations</a>
-	    </span> 
-	    <span class="pageLinks page2"> 
-	    	<a href="collections.html">Collections</a>
-	    </span> 
-	    <span class="pageLinks page3">
-	    	<a href="cyaAmerica.html">CYC America</a>
-	    </span>
-	    <span class="pageLinks page4">
-	    	<a href="contact.html">Contact Us</a>
-	    </span>    
+	<div id="largeNavigation">
+		<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>
+		<div id="navigation">
+			<span class="pageLinks page1"> 
+		    	<a href="inspirations.html">Inspirations</a>
+		    </span> 
+		    <span class="pageLinks page2"> 
+		    	<a href="collections.html">Collections</a>
+		    </span> 
+		    <span class="pageLinks page3">
+		    	<a href="cyaAmerica.html">CYC America</a>
+		    </span>
+		    <span class="pageLinks page4">
+		    	<a href="contact.html">Contact Us</a>
+		    </span>    
+		</div>
 	</div>
 </header>
-<!--
-		<div id="headerTop">
-			<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>
-	     	<div id="mobileNavIconCon">
-	     		<img id="mobileNavIcon" src="../assets/img/navIcon.png" />
-	     	</div>
-	    </div>
-		<div class="responsive-menu">
-			<ul>
-				<li><a href="inspirations.html">Inspirations</a></li>
-				<li><a href="collections.html">Collections</a></li>
-				<li><a href="cyaAmerica.html">CYC America</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
-			</ul>
-		</div>
-
-</header>
-jaime is testing this
-<div style="height:200px;"></div>
---> 
+ 
 
     
 		
@@ -79,20 +58,23 @@ jaime is testing this
    	
 	
 <style>
+    html {
+        overflow-y: scroll;
+    }
     body { overflow-x:hidden; }
     .cycle-slideshow { width: 100% }
     .cycle-slideshow img { width: 100%; height: auto }
 
     /* pager */
     .cycle-pager { 
-        text-align: center; width: 100%; z-index: 500; position: absolute; bottom: 10px; overflow: hidden;
+        text-align: right;width: 100%; z-index: 500; position: absolute; bottom: 10px; right:30px; overflow: hidden;
     }
     .cycle-pager span { 
-        font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+        font-family: arial; font-size: 30px; width: 16px; height: 16px; 
         display: inline-block; color: #ddd; cursor: pointer; 
     }
     .cycle-pager span.cycle-pager-active { color: #aeaeae;}
-    .cycle-pager > * { cursor: pointer; margin-right:10px;}
+    .cycle-pager > * { cursor: pointer; margin-right:0px;}
 
     .prevControl, .nextControl {
       position: absolute;
@@ -141,14 +123,14 @@ jaime is testing this
     #slideShowTitle {
         position: absolute;
         z-index: 999;
-        bottom: 0;
-        margin-bottom: 5%;
+        bottom: 10px;
+        margin-bottom: 10px;
         margin-left: 5%;
         color:white;
     }
-    #slideShowTitle h1 { 
-        font-family: Verdana, Geneva, sans-serif;
-        font-size:14px;
+    #slideShowTitle span { 
+        font-family: "pragmatica-web", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+        font-size:18px;
     }
     .circles {
         width:130%;
@@ -217,6 +199,7 @@ jaime is testing this
     }
     .durable p.colorTag {
         color:#666;
+        margin-bottom:30px;
     }
     .safe .round {
         border:2px solid #FFD699;
@@ -224,7 +207,9 @@ jaime is testing this
     }
     .safe p.colorTag {
         color: #FFD699;
+        margin-bottom:30px;
     }
+
 
     section {
         width:90%;
@@ -234,38 +219,65 @@ jaime is testing this
         color:#666;
     }
 
+    .pageTitle {
+        width:90%;
+        padding:20px;
+    }
+
     @media (max-width: 600px) {
         .insideCircleBox {
-            margin-left:15%;
+            margin-left:30px;
             margin-top:-110px;
         }
         .halfCircleBox {display:none;}
-        .circleBox {width:100%;}
+        .circleBox {width:90%;padding:10px;}
+        .circleBox:nth-of-type(1) {
+            margin-left:0px;
+        }
+        .safe p.colorTag, .durable p.colorTag {
+            margin-bottom:10px;
+        }
+        .circles {width:100%;}
     }
 
 
     @media (min-width: 480px) {
         section {
             width:65%;
-            padding:50px 0 50px 60px;
+            padding:50px 0 0px 60px;
             font-size:12px;
             line-height: 22px;
             color:#666;
         }
-        #slideShowTitle h1 { 
-            font-family: Verdana, Geneva, sans-serif;
-            font-size:28px;
+        .pageTitle {
+            width:65%;
+            padding:50px 0 50px 60px;
         }
         .slideShowCircle {
             display:block;
         }
+        
+        
     }
-   /* @media (min-width: 550px) {*/
-    @media (min-width: 570px) {
-
+    @media (min-width: 600px) {
+        #slideShowTitle span { 
+            font-size:24px;
+        }
+        #slideShowTitle {
+            bottom: 20px;
+        }
+        .cycle-pager span { 
+            font-size: 50px;
+        }
+        .cycle-pager > * {margin-right:10px;}
+    }
+    @media (min-width: 700px) {
+        .cycle-pager { 
+            text-align: center; 
+            right:0px;
+        }
     }
     @media (min-width: 748px) {
-
     }
     @media (min-width: 960px) {
     }
@@ -289,7 +301,7 @@ jaime is testing this
     <img src="http://www.jasondunn.com/wp-content/uploads/2010/10/Cape-Breton-Lighthouse-16-9-HDR.jpg">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Water28_16_9_hdr.jpg/1600px-Water28_16_9_hdr.jpg">
     <img src="http://digital-photography-school.com/wp-content/uploads/2013/07/ar-12.jpg">
-    <img src="http://7e18a1c646f5450b9d6d-a75424f262e53e74f9539145894f4378.r8.cf3.rackcdn.com/11_13_2013-100648-southern_neighbourhood-fac-16-9-preview_39.18_thumb_169_1384349037_1384349037.jpg">
+    <!--<img src="http://7e18a1c646f5450b9d6d-a75424f262e53e74f9539145894f4378.r8.cf3.rackcdn.com/11_13_2013-100648-southern_neighbourhood-fac-16-9-preview_39.18_thumb_169_1384349037_1384349037.jpg">-->
 
     <div class="cycle-pager"></div>
     <div id="leftSlideShowCircle" class="slideShowCircle"></div>
@@ -298,7 +310,7 @@ jaime is testing this
     <span class="nextControl"><img src="./assets/img/arrow_black_right.png" /></span>
 
     <div id="slideShowTitle">
-        <h1>CYC America<br />Flooring Company</h1>
+        <span>CYC America<br />Flooring Company</span>
     </div>
 
 </div>
@@ -312,6 +324,10 @@ jaime is testing this
     <section>
         <p>You can experience upgraded elegance as well ast he sense of pleasure and comfort just as you would do in nature. The floors are manufactured to the trendy taste of today's consumers who value natural purity, eco-friendliness nand high functionality, offers ample choice of a wide variety of products that can bring you a new life style together with pleasant adn comfortable living environment.</p>
     </section>
+
+    <div class="pageTitle">
+        <p><span class="pageTitleMain">Features |</span> <span class="pageTitleDesc">Learn more about our products</span></p>
+    </div>
 
     <div class="circles">
         <div class="circleBox environment">
@@ -335,7 +351,7 @@ jaime is testing this
         <div class="circleBox durable">
             <div class="round"></div>
             <div class="insideCircleBox">
-                <p class="colorTag">durable<br />&nbsp;</p>
+                <p class="colorTag">durable</p>
                 <p>No Sealer, finishes or spray-buffing needed.</p>
                 <p>Proprietary high quality embossed wear layer.</p>
             </div>
@@ -343,7 +359,7 @@ jaime is testing this
         <div class="circleBox safe">
             <div class="round"></div>
             <div class="insideCircleBox">
-                <p class="colorTag">safe<br />&nbsp;</p>
+                <p class="colorTag">safe</p>
                 <p>Static Coefficient of Friction (dry score of 0.81; wet score of 0.56).</p>
             </div>
         </div>
