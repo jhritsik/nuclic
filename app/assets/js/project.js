@@ -6,7 +6,11 @@ $(document).ready(function(){
 				//scrollOverflow: true
 
 			});*/
-
+	var windowWidth = $(window).innerHeight();
+	var windowHeight = $(window).innerWidth();
+	$('.hamburger').click(function(){
+		$('#smallNavigation .navigation').show();
+	});
 });
 
 /* Plugin for Cycle2; Copyright (c) 2012 M. Alsup; v20141007 */

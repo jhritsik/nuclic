@@ -16,20 +16,38 @@
   <body>
       <!-- CONTENT -->
     <style>
-	header {height:75px;}
+	header {
+		
+	}
+	#largeNavigation {display:none;}
+	#largeNavigation .navigation {
+		line-height: 60px;
+		margin-left:60px;
+	}
 	#largeNavigation .logo {
 		width:10%;
 		float:left;
 		margin-top:2%;
 	}
-	#smallNavigation .logo {
-		width:100px;
 
+	#smallNavigation {
+		border:2px solid red;
 	}
-	#largeNavigation {display:none;}
-	img.hamburger {width:35px;}
-
-	@media (min-width: 600px) {
+	#smallNavigation .navigation {
+		border:1px solid orange;
+		margin:auto;
+		display:none;
+	}
+	#smallNavigation .pageLinks {
+		clear:both;
+		text-align: center
+	}
+	#topSmallNav {
+		border:2px dashed green;
+	}
+	img.hamburger {width:35px;margin-left:20px;}
+	img.logo {width:80px;margin-bottom:-4px;}
+	@media (min-width: 650px) {
 		#largeNavigation {display:block;}
 		#smallNavigation {display:none;}
     }
@@ -37,8 +55,11 @@
 <header>
 	<!--<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>-->
 	<div id="largeNavigation">
-		<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>
+		<!--  -->
 		<div class="navigation">
+			<span class="pageLinks page1"> 
+		    	<a href="inspirations.html">logo</a>
+		    </span> 
 			<span class="pageLinks page1"> 
 		    	<a href="inspirations.html">Inspirations</a>
 		    </span> 
@@ -54,21 +75,25 @@
 		</div>
 	</div>
 	<div id="smallNavigation">
-		<img class="hamburger" src="./assets/img/navIcon.jpg" />
-		<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>
+		<div id="topSmallNav">
+			<img class="hamburger" src="./assets/img/navIcon.jpg" />
+			<!--<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>-->
+			<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>
+		</div>
+
 		<div class="navigation">
-			<span class="pageLinks page1"> 
+			<div class="pageLinks page1"> 
 		    	<a href="inspirations.html">Inspirations</a>
-		    </span> 
-		    <span class="pageLinks page2"> 
+		    </div> 
+		    <div class="pageLinks page2"> 
 		    	<a href="collections.html">Collections</a>
-		    </span> 
-		    <span class="pageLinks page3">
+		    </div> 
+		    <div class="pageLinks page3">
 		    	<a href="cyaAmerica.html">CYC America</a>
-		    </span>
-		    <span class="pageLinks page4">
+		    </div>
+		    <div class="pageLinks page4">
 		    	<a href="contact.html">Contact Us</a>
-		    </span>    
+		    </div>    
 		</div>
 	</div>
 </header>
@@ -104,12 +129,23 @@
 
 <!-- endbuild -->
 
-    
+    <style>
+	footer {
+		margin-top:25px;
+		padding:10px 0;
+		border-top:1px solid #aeaeae;
+	}
+	footer img.logo {width:100px;margin:0px;}
+</style>
 <footer>
 	<div id="footerInfo">
-	    <p class="footerLinks"><span class="allCaps">ChinYang</span> Chemical Corporation</p> 
-	    <p class="footerLinks">300-1 Yeocheondong, Namgu, Ulsan City Chinyang Chemical Corporation</p>
-	    <p class="footerLinks">Tel. 82-52-278-0701 / Fax. 82-52-278-0848</p> 
+		<img class="logo" src="../assets/img/logo.png" />
+	    <span class="pageLinks page1"> 
+	    	<a href="inspirations.html">Privacy Policy</a>
+	    </span> 
+	    <span class="pageLinks page2"> 
+	    	<a href="collections.html">Terms of service</a>
+	    </span>  
 	</div>
 </footer>
 

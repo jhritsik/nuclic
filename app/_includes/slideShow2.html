@@ -77,13 +77,14 @@
     .circles {
         width:130%;
         overflow: auto;
-        border:1px solid red;
+        border:0px solid red;
     }
     .circleBox {
         float:left;
         width:16%;
-        border:1px solid #aeaeae;
+        border:0px solid #aeaeae;
         margin-right: 13px;
+        min-height: 145px;
     }
     .halfCircleBox {
         width:7%;
@@ -165,8 +166,10 @@
         width:90%;
         padding:20px;
     }
+    span.pageTitleMain {text-transform: uppercase;}
+    span.pageTitleDesc {color:#666;}
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
         .insideCircleBox {
             margin-left:30px;
             margin-top:-110px;
@@ -179,7 +182,7 @@
         .safe p.colorTag, .durable p.colorTag {
             margin-bottom:10px;
         }
-        .circles {width:100%;}
+        .circles {width:100%;overflow:hidden;}
     }
 
 
@@ -201,7 +204,7 @@
         
         
     }
-    @media (min-width: 600px) {
+    @media (min-width: 650px) {
         #slideShowTitle span { 
             font-size:24px;
         }
@@ -226,7 +229,7 @@
 
 
 </style>
-<br />
+
 <div class="cycle-slideshow"
     data-cycle-loader="wait"
     data-cycle-speed="1000" 
