@@ -7,7 +7,7 @@ pageId: 5
 # optional list of page-specific libraries
 pageLibs: 
 - bower_components/moment/moment.js
-- bower_components/hammer.js/hammer.js
+# - bower_components/hammer.js/hammer.js
 # - bower_components/fullpage.js/jquery.fullPage.js
 - bower_components/fullpage.js/vendors/jquery.slimscroll.min.js
 - bower_components/hammer.js/hammer.js
@@ -26,9 +26,16 @@ pageCss:
 ---
 
 <div id="app">
-   	
+
+	{{> addThis}}
+
 	{{> slideShow2}}
 
-	
+	{{> features}}
+
+	{{> inspirations}}
+
+	{{> collections}}
+
 
 </div>

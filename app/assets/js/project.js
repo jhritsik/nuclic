@@ -6,10 +6,24 @@ $(document).ready(function(){
 				//scrollOverflow: true
 
 			});*/
-	var windowWidth = $(window).innerHeight();
-	var windowHeight = $(window).innerWidth();
+	var windowWidth = $(window).width();
+	var windowHeight = $(window).height();
+	var topSmallNavHeight = $('#topSmallNav').height();
+	var adjustedWindowHeight = windowHeight - topSmallNavHeight;
+	var smallNav = $('#smallNavigation .navigation');
+	$('#smallNavigation .navigation').css('height',adjustedWindowHeight);
 	$('.hamburger').click(function(){
-		$('#smallNavigation .navigation').show();
+		if ($(smallNav).is(':hidden')){
+			$('#smallNavigation .navigation').slideDown( 'slow', function() {
+			    $('#app').hide();
+			});
+		} else {
+			$('#app').show();
+			$('#smallNavigation .navigation').slideUp('slow');
+		}
+		
+		
+		
 	});
 });
 
