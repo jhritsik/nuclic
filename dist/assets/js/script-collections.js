@@ -5581,11 +5581,25 @@ $(document).ready(function(){
 				//scrollOverflow: true
 
 			});*/
-	$( '#mobileNavIconCon' ).click(function(){
-		$('.responsive-menu').slideToggle();
-	})
-
-
+	var windowWidth = $(window).width();
+	var windowHeight = $(window).height();
+	var topSmallNavHeight = $('#topSmallNav').height();
+	var adjustedWindowHeight = windowHeight - topSmallNavHeight;
+	var smallNav = $('#smallNavigation .navigation');
+	$('#smallNavigation .navigation').css('height',adjustedWindowHeight);
+	$('.hamburger').click(function(){
+		if ($(smallNav).is(':hidden')){
+			$('#smallNavigation .navigation').slideDown( 'slow', function() {
+			    $('#app').hide();
+			});
+		} else {
+			$('#app').show();
+			$('#smallNavigation .navigation').slideUp('slow');
+		}
+		
+		
+		
+	});
 });
 
 /* Plugin for Cycle2; Copyright (c) 2012 M. Alsup; v20141007 */

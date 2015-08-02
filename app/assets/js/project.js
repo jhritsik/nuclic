@@ -8,7 +8,15 @@ $(document).ready(function(){
 			});*/
 	var windowWidth = $(window).width();
 	var windowHeight = $(window).height();
-	var topSmallNavHeight = $('#topSmallNav').height();
+	//var topSmallNavHeight = $('#topSmallNav').height();
+	var topSmallNavHeight = $('#smallNavigation').height();
+	var topLargeNavHeight = $('#largeNavigation .navigation').height();
+	var mainNavHeight = $('.mainNavHeight').height();
+	if ($('#smallNavigation').is(':visible')){
+		$('#app').css('margin-top', topSmallNavHeight)
+	} else {
+		$('#app').css('margin-top', topLargeNavHeight)
+	}
 	var adjustedWindowHeight = windowHeight - topSmallNavHeight;
 	var smallNav = $('#smallNavigation .navigation');
 	$('#smallNavigation .navigation').css('height',adjustedWindowHeight);

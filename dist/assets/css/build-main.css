@@ -44,16 +44,6 @@
 		width: 100%;
 		background-color: white;
 	}
-	
-	#navigation {
-		/*background-color:#f7f7f7;*/
-		background-color: #fff;
-		padding:20px 0;
-		color:#666;
-		text-transform: uppercase;
-		text-decoration: none;
-		text-align: left;
-	}
 	.pageLinks {
 		padding:0 10px;
 		color:#000;
@@ -71,22 +61,235 @@
 
 	
 	/* SLIDESHOW CSS */
-	#fullpage {
-		margin-bottom:20px;
-	}
+	    html {
+        overflow-y: scroll;
+    }
+    body { overflow-x:hidden; }
+    .cycle-slideshow { width: 100% }
+    .cycle-slideshow img { width: 100%; height: auto }
+
+    /* pager */
+    .cycle-pager { 
+        text-align: right;width: 100%; z-index: 500; position: absolute; bottom: 10px; right:30px; overflow: hidden;
+    }
+    .cycle-pager span { 
+        font-family: arial; font-size: 30px; width: 16px; height: 16px; 
+        display: inline-block; color: #ddd; cursor: pointer; 
+    }
+    .cycle-pager span.cycle-pager-active { color: #aeaeae;}
+    .cycle-pager > * { cursor: pointer; margin-right:0px;}
+
+    .prevControl, .nextControl {
+      position: absolute;
+      top: 46.5%;
+      z-index: 9999;
+      width: 15px;
+    }
+    .prevControl {
+        left:0;
+        margin-left:10px;
+    }
+    .nextControl {
+        right:0;
+        margin-right:10px;
+    }
+
+    /* jaimes css */
+    .slideShowCircle {
+        position: absolute;
+        top: 40%;
+        z-index: 9999;
+        display:none;
+    }
+    #leftSlideShowCircle {
+        left:0;
+        width: 50px;
+        height: 100px; /* as the half of the width */
+        background-color: #fff;
+        opacity:0.2;
+        border-top-right-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
+        border: 0px solid gray;
+        border-bottom: 0;
+    }
+    #rightSlideShowCircle {
+        right:0;
+        width: 50px;
+        height: 100px; /* as the half of the width */
+        background-color: #fff;
+        opacity:0.2;
+        border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
+        border: 0px solid gray;
+        border-bottom: 0;
+    }
+    #slideShowTitle {
+        position: absolute;
+        z-index: 999;
+        bottom: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+        color:white;
+    }
+    #slideShowTitle span { 
+        font-family: "pragmatica-web", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+        font-size:18px;
+    }
+    .circles {
+        width:130%;
+        overflow: auto;
+        border:0px solid red;
+    }
+    .circleBox {
+        float:left;
+        width:16%;
+        border:0px solid #aeaeae;
+        margin-right: 13px;
+        min-height: 145px;
+    }
+    .halfCircleBox {
+        width:7%;
+        margin-right:0px;
+    }
+    .circleBox:nth-of-type(1) {
+        margin-left:20px;
+    }
+    .round {
+        border:1px solid green;
+        width:130px;
+        height:130px;
+        -webkit-border-radius: 100px;
+    }
+    .halfRound {
+        width: 65px;
+        height: 130px; /* as the half of the width */
+        background-color: #fff;
+        opacity:0.2;
+        border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
+        border:1px solid #666;
+        opacity: 0.4;
+
+    }
+    .insideCircleBox {
+        margin-left:20%;
+    }
+    .circleBox p:nth-child(2), .circleBox p:nth-child(3), .circleBox p:nth-child(4) {
+        font-size:11px;
+        color:#666;
+        margin-bottom:10px;
+    }
+    .circleBox p.colorTag {
+        margin-bottom:10px;
+        margin-top:20px;
+    }
+    .environment .round {
+        border:1px solid #66E0FF;
+        opacity: 0.4;
+    }
+    .environment p.colorTag {
+        color:#66E0FF;
+    }
+    .maintenance .round {
+        border:1px solid #66FF66;
+        opacity:0.2;
+    }
+    .maintenance p.colorTag {
+        color:#66FF66;
+    }
+    .durable .round {
+        border:1px solid #666;
+        opacity: 0.4;
+    }
+    .durable p.colorTag {
+        color:#666;
+        margin-bottom:30px;
+    }
+    .safe .round {
+        border:2px solid #FFD699;
+        opacity: 0.4;
+    }
+    .safe p.colorTag {
+        color: #FFD699;
+        margin-bottom:30px;
+    }
+
+
+    section {
+        width:90%;
+        padding:20px;
+        font-size:12px;
+        line-height: 22px;
+        color:#666;
+    }
+
+    .pageTitle {
+        width:90%;
+        padding:20px;
+    }
+    span.pageTitleMain {text-transform: uppercase;}
+    span.pageTitleDesc {color:#666;}
+
+
 
 
 /* ------ BEGIN MEDIA QUERIES ------ */
 /* ------ TRY TO BE SPARING WITH THESE ------ */
 
-	@media (min-width: 480px) {
-	}
-   /* @media (min-width: 550px) {*/
-   	@media (min-width: 570px) {
+    @media (max-width: 650px) {
+        .insideCircleBox {
+            margin-left:30px;
+            margin-top:-110px;
+        }
+        .halfCircleBox {display:none;}
+        .circleBox {width:90%;padding:10px;}
+        .circleBox:nth-of-type(1) {
+            margin-left:0px;
+        }
+        .safe p.colorTag, .durable p.colorTag {
+            margin-bottom:10px;
+        }
+        .circles {width:100%;overflow:hidden;}
+    }
 
-	}
-	@media (min-width: 748px) {
 
-	}
-	@media (min-width: 960px) {
-	}
+    @media (min-width: 480px) {
+        section {
+            width:65%;
+            padding:50px 0 0px 60px;
+            font-size:12px;
+            line-height: 22px;
+            color:#666;
+        }
+        .pageTitle {
+            width:65%;
+            padding:50px 0 50px 60px;
+        }
+        .slideShowCircle {
+            display:block;
+        }
+        
+        
+    }
+    @media (min-width: 650px) {
+        #slideShowTitle span { 
+            font-size:24px;
+        }
+        #slideShowTitle {
+            bottom: 20px;
+        }
+        .cycle-pager span { 
+            font-size: 50px;
+        }
+        .cycle-pager > * {margin-right:10px;}
+    }
+    @media (min-width: 700px) {
+        .cycle-pager { 
+            text-align: center; 
+            right:0px;
+        }
+    }
+    @media (min-width: 748px) {
+    }
+    @media (min-width: 960px) {
+    }

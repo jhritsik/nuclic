@@ -36,6 +36,12 @@
 	}
 
 	#smallNavigation {
+		position: fixed;
+		z-index: 99999;
+		background-color: #fff;
+		border-bottom: 1px solid #aeaeae;
+		width: 100%;
+		height:50px;
 		display: block
 	}
 	#smallNavigation .navigation {
@@ -66,6 +72,7 @@
 	}
 	img.hamburger {width:35px;margin-left:20px;}
 	img.logo {width:80px;margin-bottom:-4px;}
+
 	@media (min-width: 650px) {
 		#largeNavigation {display:block;}
 		#smallNavigation {display:none;}
@@ -73,7 +80,7 @@
 </style>
 <header>
 	<!--<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>-->
-	<div id="largeNavigation">
+	<div id="largeNavigation" class="mainNavCont">
 		<!--  -->
 		<div class="navigation">
 			<span class="pageLinks page1"> 
@@ -93,7 +100,7 @@
 		    </span>    
 		</div>
 	</div>
-	<div id="smallNavigation">
+	<div id="smallNavigation" class="mainNavCont">
 		<div id="topSmallNav">
 			<img class="hamburger" src="./assets/img/navIcon.jpg" />
 			<!--<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>-->
@@ -102,15 +109,18 @@
 
 		<div class="navigation">
 			<div class="pageLinks page1"> 
+		    	<a href="inspirations.html">Home</a>
+		    </div> 
+			<div class="pageLinks page2"> 
 		    	<a href="inspirations.html">Inspirations</a>
 		    </div> 
-		    <div class="pageLinks page2"> 
+		    <div class="pageLinks page3"> 
 		    	<a href="collections.html">Collections</a>
 		    </div> 
-		    <div class="pageLinks page3">
+		    <div class="pageLinks page4">
 		    	<a href="cyaAmerica.html">CYC America</a>
 		    </div>
-		    <div class="pageLinks page4">
+		    <div class="pageLinks page5">
 		    	<a href="contact.html">Contact Us</a>
 		    </div>    
 		    <div class="pageLinks">
@@ -234,13 +244,12 @@
     	#collectionsContainer {
     		width:90%;
     		margin:0 auto;
-    		border:1px solid purple;
     		overflow: auto;
     	}
     	.collectionsSquare {
-    		width:24.5%;
+    		width:100%;
     		height:auto;
-    		border:1px solid red;
+    		margin-bottom:10px;
     	}
     	.collectionsSquare:nth-child(1) {
 		    float:left;
@@ -248,27 +257,57 @@
     	.collectionsSquare:nth-child(2) {
 		    float:left;
 		}
+		@media (min-width: 650px) {
+	        .collectionsSquare {
+	    		width:23.7%;
+	    	}
+	    	#firstSquare, #secondSquare, #thirdSquare, #fifthSquare, #sixthSquare, #seventhSquare {
+	    		margin-right:10px;
+	    	}
+	    }
     </style>
     <div id="collectionsContainer">
     	<div class="twoContainer">
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/asmart.png" /></div>
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
+    		<div id="firstSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/asmart.png" /></div>
+    		<div id="secondSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
     	</div>
     	<div class="twoContainer">
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/achoice.png" /></div>
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
+    		<div id="thirdSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/achoice.png" /></div>
+    		<div id="fourthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
     	</div>
 
     	<div class="twoContainer">
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/green.png" /></div>
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/bestrong.png" /></div>
+    		<div id="fifthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/green.png" /></div>
+    		<div id="sixthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/bestrong.png" /></div>
     	</div>
     	<div class="twoContainer">
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
+    		<div id="seventhSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
+    		<div id="eighthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
     	</div>
     </div>
 
+
+	   	<div class="pageTitle">
+        <p><span class="pageTitleMain">CYC America |</span> <span class="pageTitleDesc">Chinyang Chemical</span></p>
+    </div>
+
+    <style>
+    	.singleImgCont {
+    		width:90%;
+    		margin:0 auto;
+    		border:1px solid #aeaeae;
+    	}
+    	.singleImgCont img {
+    		width:100%;
+    	}
+    </style>	
+    <div class="singleImgCont">
+    	<img src="./assets/img/cycAmerica/cycAmerica.png" />
+    </div>
+
+    <section>
+		<p>A leader in PVC-related industry, is a sound enterprise that has been growing steadily since its establishment. We have been playing a pivotal role in the development of domestic PVC industry. Ever active in responding to changin gdemands, we developed, in addition to the exsiting PVC business, a vast array of eco-friendly products using TPU TPO materials which led to the expansion of our business in a variety of areas including automobile and electronics.</p>
+	</section>
 
 
 </div>

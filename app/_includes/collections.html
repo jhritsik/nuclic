@@ -6,13 +6,12 @@
     	#collectionsContainer {
     		width:90%;
     		margin:0 auto;
-    		border:1px solid purple;
     		overflow: auto;
     	}
     	.collectionsSquare {
-    		width:24.5%;
+    		width:100%;
     		height:auto;
-    		border:1px solid red;
+    		margin-bottom:10px;
     	}
     	.collectionsSquare:nth-child(1) {
 		    float:left;
@@ -20,23 +19,31 @@
     	.collectionsSquare:nth-child(2) {
 		    float:left;
 		}
+		@media (min-width: 650px) {
+	        .collectionsSquare {
+	    		width:23.7%;
+	    	}
+	    	#firstSquare, #secondSquare, #thirdSquare, #fifthSquare, #sixthSquare, #seventhSquare {
+	    		margin-right:10px;
+	    	}
+	    }
     </style>
     <div id="collectionsContainer">
     	<div class="twoContainer">
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/asmart.png" /></div>
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
+    		<div id="firstSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/asmart.png" /></div>
+    		<div id="secondSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
     	</div>
     	<div class="twoContainer">
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/achoice.png" /></div>
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
+    		<div id="thirdSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/achoice.png" /></div>
+    		<div id="fourthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
     	</div>
 
     	<div class="twoContainer">
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/green.png" /></div>
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/bestrong.png" /></div>
+    		<div id="fifthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/green.png" /></div>
+    		<div id="sixthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/bestrong.png" /></div>
     	</div>
     	<div class="twoContainer">
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
-    		<div class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
+    		<div id="seventhSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
+    		<div id="eighthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
     	</div>
     </div>
