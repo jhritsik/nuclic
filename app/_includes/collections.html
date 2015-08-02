@@ -1,3 +1,4 @@
+<div id="collections" class="pageSection">   
    <div class="pageTitle">
         <p><span class="pageTitleMain">Collections |</span> <span class="pageTitleDesc">Explore our floors</span></p>
     </div>
@@ -19,6 +20,9 @@
     	.collectionsSquare:nth-child(2) {
 		    float:left;
 		}
+		.collectionsSquare img {
+			width:100%;
+		}
 		@media (min-width: 650px) {
 	        .collectionsSquare {
 	    		width:23.7%;
@@ -30,20 +34,21 @@
     </style>
     <div id="collectionsContainer">
     	<div class="twoContainer">
-    		<div id="firstSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/asmart.png" /></div>
-    		<div id="secondSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
+    		<div id="firstSquare" class="collectionsSquare"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></div>
+    		<div id="secondSquare" class="collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_aurora.png"/></div>
     	</div>
     	<div class="twoContainer">
-    		<div id="thirdSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/achoice.png" /></div>
-    		<div id="fourthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
+    		<div id="thirdSquare" class="collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_achoice.png"/></div>
+    		<div id="fourthSquare" class="collectionsSquare"><img class="lazyload" data-expand="-80" data-src="./assets/img/collections/collections_generic.png"/></div>
     	</div>
 
     	<div class="twoContainer">
-    		<div id="fifthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/green.png" /></div>
-    		<div id="sixthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/bestrong.png" /></div>
+    		<div id="fifthSquare" class="collectionsSquare"><img class="lazyload" data-expand="-100" data-src="./assets/img/collections/collections_green.png"/></div>
+    		<div id="sixthSquare" class="collectionsSquare"><img class="lazyload" data-expand="-120" data-src="./assets/img/collections/collections_bestrong.png"/></div>
     	</div>
     	<div class="twoContainer">
-    		<div id="seventhSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/aurora.png" /></div>
-    		<div id="eighthSquare" class="collectionsSquare"><img width="100%" src="./assets/img/collections/generic.png" /></div>
+    		<div id="seventhSquare" class="collectionsSquare"><img class="lazyload" data-expand="-140" data-src="./assets/img/collections/collections_aurora.png"/></div>
+    		<div id="eighthSquare" class="collectionsSquare"><img class="lazyload" data-expand="-160" data-src="./assets/img/collections/collections_generic.png"/></div>
     	</div>
     </div>
+</div><!-- end div #collections -->

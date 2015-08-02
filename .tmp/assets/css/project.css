@@ -18,7 +18,18 @@
 		line-height: 24px;
 	}
 
-	
+	#collections, #cycAmerica {
+		display:none;
+	}
+	/* ------ BEGIN CSS FOR LAZYLOADING IMAGES ------ */
+	.lazyload,
+	.lazyloading {
+	    opacity: 0;
+	}
+	.lazyloaded {
+	    opacity: 1;
+	    transition: opacity 300ms;
+	}
 	/* SLIDESHOW CSS */
 	    html {
         overflow-y: scroll;
@@ -242,6 +253,9 @@
             font-size: 50px;
         }
         .cycle-pager > * {margin-right:10px;}
+        #collections, #cycAmerica {
+			display:block;
+		}
     }
     @media (min-width: 700px) {
         .cycle-pager { 

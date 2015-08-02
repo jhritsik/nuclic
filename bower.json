@@ -7,6 +7,7 @@
     "jquery-dfp": "git+https://github.com/natgeo/jquery.dfp.js#1.1.1",
     "matchMedia": "~0.2.0",
     "moment": "~2.10.3",
-    "hammer.js": "~2.0.4"
+    "hammer.js": "~2.0.4",
+    "lazysizes": "~1.1.4"
   }
 }
