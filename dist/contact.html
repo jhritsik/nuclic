@@ -18,6 +18,12 @@
 	}
 
 	#smallNavigation {
+		position: fixed;
+		z-index: 99999;
+		background-color: #fff;
+		border-bottom: 1px solid #aeaeae;
+		width: 100%;
+		height:50px;
 		display: block
 	}
 	#smallNavigation .navigation {
@@ -48,10 +54,11 @@
 	}
 	img.hamburger {width:35px;margin-left:20px;}
 	img.logo {width:80px;margin-bottom:-4px;}
+
 	@media (min-width: 650px) {
 		#largeNavigation {display:block;}
 		#smallNavigation {display:none;}
-    }</style><header><div id="largeNavigation"><div class="navigation"><span class="pageLinks page1"><a href="inspirations.html">logo</a></span> <span class="pageLinks page1"><a href="inspirations.html">Inspirations</a></span> <span class="pageLinks page2"><a href="collections.html">Collections</a></span> <span class="pageLinks page3"><a href="cyaAmerica.html">CYC America</a></span> <span class="pageLinks page4"><a href="contact.html">Contact Us</a></span></div></div><div id="smallNavigation"><div id="topSmallNav"><img class="hamburger" src="./assets/img/navIcon.jpg">  <a href="index.html"><img class="logo" src="../assets/img/logo.png"></a></div><div class="navigation"><div class="pageLinks page1"><a href="inspirations.html">Inspirations</a></div><div class="pageLinks page2"><a href="collections.html">Collections</a></div><div class="pageLinks page3"><a href="cyaAmerica.html">CYC America</a></div><div class="pageLinks page4"><a href="contact.html">Contact Us</a></div><div class="pageLinks"><a href="tel:1234567">Call 123-4567</a></div><div class="pageLinks"><a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a></div></div></div></header><div id="app"></div><script src="./assets/bower_components/jquery/dist/jquery.min.js"></script><script src="http://malsup.github.com/jquery.cycle2.js"></script><script src="./assets/js/script-contact.js"></script><style>footer {
+    }</style><header><div id="largeNavigation" class="mainNavCont"><div class="navigation"><span class="pageLinks page1"><a href="inspirations.html">logo</a></span> <span class="pageLinks page2"><span>Inspirations</span></span> <span class="pageLinks page3"><span>Collections</span></span> <span class="pageLinks page4"><span>CYC America</span></span> <span class="pageLinks page5"><span>Contact Us</span></span></div></div><div id="smallNavigation" class="mainNavCont"><div id="topSmallNav"><img class="hamburger" src="./assets/img/navIcon.jpg">  <a href="index.html"><img class="logo" src="../assets/img/logo.png"></a></div><div class="navigation"><div class="pageLinks page1"><span>Home</span></div><div class="pageLinks page2"><span>Inspirations</span></div><div class="pageLinks page3"><span>Collections</span></div><div class="pageLinks page4"><span>CYC America</span></div><div class="pageLinks page5"><span>Contact Us</span></div><div class="pageLinks"><a href="tel:1234567">Call 123-4567</a></div><div class="pageLinks"><a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a></div></div></div></header><div id="app"></div><script src="./assets/bower_components/jquery/dist/jquery.min.js"></script><script src="http://malsup.github.com/jquery.cycle2.js"></script><script src="./assets/js/script-contact.js"></script><style>footer {
 		margin-top:25px;
 		padding:10px 0;
 		border-top:1px solid #aeaeae;
