@@ -59,7 +59,7 @@
 		line-height: 24px;
 	}
 
-	#collections, #cycAmerica {
+	#inspirations, #collections, #cycAmerica {
 		display:none;
 	}
 	/* ------ BEGIN CSS FOR LAZYLOADING IMAGES ------ */
@@ -70,6 +70,10 @@
 	.lazyloaded {
 	    opacity: 1;
 	    transition: opacity 300ms;
+	}
+	#cycAmerica .singleImgCont .lazyloaded {
+		opacity: 1;
+		transition: opacity 1000ms;
 	}
 	/* SLIDESHOW CSS */
 	    html {
@@ -276,12 +280,7 @@
         .pageTitle {
             width:65%;
             padding:50px 0 50px 60px;
-        }
-        .slideShowCircle {
-            display:block;
-        }
-        
-        
+        }       
     }
     @media (min-width: 650px) {
         #slideShowTitle span { 
@@ -294,9 +293,11 @@
             font-size: 50px;
         }
         .cycle-pager > * {margin-right:10px;}
-        #collections, #cycAmerica {
+        
+        #inspirations, #collections, #cycAmerica {
 			display:block;
 		}
+
     }
     @media (min-width: 700px) {
         .cycle-pager { 
@@ -305,6 +306,9 @@
         }
     }
     @media (min-width: 748px) {
+    	.slideShowCircle {
+            display:block;
+        }
     }
     @media (min-width: 960px) {
     }
