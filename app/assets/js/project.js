@@ -9,6 +9,31 @@ $(document).ready(function(){
 	var windowWidth = $(window).width();
 	var windowHeight = $(window).height();
 
+	//var topSmallNavHeight = $('#topSmallNav').height();
+	var topSmallNavHeight = $('#smallNavigation').height();
+	var topLargeNavHeight = $('#largeNavigation .navigation').height();
+	var mainNavHeight = $('.mainNavHeight').height();
+	if ($('#smallNavigation').is(':visible')){
+		$('#app').css('margin-top', topSmallNavHeight)
+	} else {
+		$('#app').css('margin-top', topLargeNavHeight);
+	}
+
+	
+	var adjustedWindowHeight = windowHeight - topSmallNavHeight;
+	var smallNav = $('#smallNavigation .navigation');
+	$('#smallNavigation .navigation').css('height',adjustedWindowHeight);
+	$('.hamburger').click(function(){
+		if ($(smallNav).is(':hidden')){
+			$('#smallNavigation .navigation').slideDown( 'slow', function() {
+			    $('#app').hide();
+			});
+		} else {
+			$('#app').show();
+			$('#smallNavigation .navigation').slideUp('slow');
+		}
+	});	
+
 
 	if (windowWidth < 650){
 		$('#smallNavigation .navigation .page1').click(function(){
@@ -36,32 +61,71 @@ $(document).ready(function(){
 			$('#cycAmerica').show();
 		});
 
+	} else if (windowWidth >= 650){
+		$('#largeNavigation .navigation .page1').click(function(){
+			$("html, body").animate({scrollTop: $('#slideShowCont').offset().top + (-60) }, 1000);
+		});
+		$('#largeNavigation .navigation .page2').click(function(){
+			$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
+		});
+		$('#largeNavigation .navigation .page3').click(function(){
+			$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
+		});
+		$('#largeNavigation .navigation .page4').click(function(){
+			$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
+		});
+		
 	}
 
+	$( window ).resize(function() {
 
-	//var topSmallNavHeight = $('#topSmallNav').height();
-	var topSmallNavHeight = $('#smallNavigation').height();
-	var topLargeNavHeight = $('#largeNavigation .navigation').height();
-	var mainNavHeight = $('.mainNavHeight').height();
-	if ($('#smallNavigation').is(':visible')){
-		$('#app').css('margin-top', topSmallNavHeight)
-	} else {
-		$('#app').css('margin-top', topLargeNavHeight)
-	}
-	var adjustedWindowHeight = windowHeight - topSmallNavHeight;
-	var smallNav = $('#smallNavigation .navigation');
-	$('#smallNavigation .navigation').css('height',adjustedWindowHeight);
-	$('.hamburger').click(function(){
-		if ($(smallNav).is(':hidden')){
-			$('#smallNavigation .navigation').slideDown( 'slow', function() {
-			    $('#app').hide();
-			});
+		var windowWidth = $(window).width();
+		var windowHeight = $(window).height();
+
+		//var topSmallNavHeight = $('#topSmallNav').height();
+		var topSmallNavHeight = $('#smallNavigation').height();
+		var topLargeNavHeight = $('#largeNavigation .navigation').height();
+		var mainNavHeight = $('.mainNavHeight').height();
+		if ($('#smallNavigation').is(':visible')){
+			$('#app').css('margin-top', topSmallNavHeight)
 		} else {
-			$('#app').show();
-			$('#smallNavigation .navigation').slideUp('slow');
+			$('#app').css('margin-top', topLargeNavHeight);
 		}
-	});	
+
+		if (windowWidth < 650){
+			$('#smallNavigation .navigation .page1').click(function(){
+				$('#smallNavigation .navigation').hide();
+				$('#app').show();
+				$('.pageSection').hide();
+				$('#slideShowCont, #features').show();
+			});
+			$('#smallNavigation .navigation .page2').click(function(){
+				$('#smallNavigation .navigation').hide();
+				$('#app').show();
+				$('.pageSection').hide();
+				$('#inspirations').show();
+			});
+			$('#smallNavigation .navigation .page3').click(function(){
+				$('#smallNavigation .navigation').hide();
+				$('#app').show();
+				$('.pageSection').hide();
+				$('#collections').show();
+			});
+			$('#smallNavigation .navigation .page4').click(function(){
+				$('#smallNavigation .navigation').hide();
+				$('#app').show();
+				$('.pageSection').hide();
+				$('#cycAmerica').show();
+			});
+
+		} else if (windowWidth >= 650){
+			$('.pageSection').show();
+		}
+	});
+  	
 });
+
+
 /*
 $.fn.isOnScreen = function(){
     
