@@ -46,7 +46,8 @@ module.exports = function (grunt) {
         // change this to '0.0.0.0' to access the server from outside
         // hostname: '0.0.0.0'
         // hostname: '192.168.197.198.xip.io'
-        hostname: 'isp.dev.nationalgeographic.com'
+        //hostname: 'isp.dev.nationalgeographic.com'
+        hostname: 'localhost'
       },
       livereload: {
         options: {
