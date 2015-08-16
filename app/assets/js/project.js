@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$( '.slideShow2, .patternSlideShow' ).cycle({});
 	/*$('#fullpage').fullpage({
 				fitToSection:false,
 				autoScrolling: false,
@@ -63,15 +64,19 @@ $(document).ready(function(){
 
 	} else if (windowWidth >= 650){
 		$('#largeNavigation .navigation .page1').click(function(){
+			//$("html, body").animate({scrollTop: $('#slideShowCont').offset().top + (-60) }, 1000);
 			$("html, body").animate({scrollTop: $('#slideShowCont').offset().top + (-60) }, 1000);
 		});
 		$('#largeNavigation .navigation .page2').click(function(){
+			//$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
 			$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
 		});
 		$('#largeNavigation .navigation .page3').click(function(){
+			//$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
 			$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
 		});
 		$('#largeNavigation .navigation .page4').click(function(){
+			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 			$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 		});
 		

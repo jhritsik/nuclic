@@ -148,15 +148,13 @@
     <div class="cycle-slideshow"
         data-cycle-loader="wait"
         data-cycle-speed="1000" 
-        data-cycle-timeout="600000"
+        data-cycle-timeout="10000"
         data-cycle-fx="scrollHorz"
         data-cycle-swipe=true
         data-cycle-swipe-fx=scrollHorz
         data-cycle-prev=".prevControl"
         data-cycle-next=".nextControl"
-        
-
-        >
+    >
         
         <img src="./assets/img/mainGallery/Hospital.jpg">
         <img src="./assets/img/mainGallery/Lobby2.jpg">
@@ -239,23 +237,59 @@
     <div style="clear:both;"></div>
 
 	<div id="inspirations" class="pageSection">
-	this will be the inspirations page
+	<div class="pageTitle">
+        <p><span class="pageTitleMain">Inspiration |</span> <span class="pageTitleDesc">Bring nature to your product</span></p>
+    </div>
+    <style>
+    	#inspirationsSlidesCont {
+    		border:2px dashed red;
+    		overflow:auto;
+    		margin:0 60px;
+    	}
+    </style>
+    <div id="inspirationsSlidesCont">
+	    <div class="slideShow2"
+	    	data-cycle-loader="wait"
+	        data-cycle-speed="1000" 
+	        data-cycle-timeout="0"
+	        data-cycle-fx="scrollHorz"
+	        data-cycle-swipe=true
+	        data-cycle-swipe-fx=scrollHorz
+	        data-cycle-prev=".prevControl2"
+	        data-cycle-next=".nextControl2"
+	    >
+	        
+	        <img src="./assets/img/inspiration/inspirationsDisplay.png">
+	        <img src="./assets/img/inspiration/Lobby2.jpg">
+	        <img src="./assets/img/inspiration/Office.jpg">
+	        <img src="./assets/img/inspiration/Retail.jpg">
+	        <!--<img src="http://7e18a1c646f5450b9d6d-a75424f262e53e74f9539145894f4378.r8.cf3.rackcdn.com/11_13_2013-100648-southern_neighbourhood-fac-16-9-preview_39.18_thumb_169_1384349037_1384349037.jpg">-->
 
+	        <div class="cycle-pager"></div>
+	        <div id="leftSlideShowCircle" class="slideShowCircle"></div>
+	        <div id="rightSlideShowCircle" class="slideShowCircle"></div>
+	        <span class="prevControl2"><img src="./assets/img/arrow_black_left.png" /></span>
+	        <span class="nextControl2"><img src="./assets/img/arrow_black_right.png" /></span>
 
-
-    <section>
-        <p>the photo gallery will be coming soon</p>
-        <p>the photo gallery will be coming soon</p>
-        <p>the photo gallery will be coming soon</p>
-        <p>the photo gallery will be coming soon</p>
-        <p>the photo gallery will be coming soon</p>
-        <p>the photo gallery will be coming soon</p>
-        <p>the photo gallery will be coming soon</p>
-        <p>the photo gallery will be coming soon</p>
-        <p>the photo gallery will be coming soon</p>
-        
-    </section>
-
+	    </div>
+	    <div id="patternCont">
+		    <div class="patternSlideShow"
+		    	data-cycle-loader="wait"
+		        data-cycle-speed="3000" 
+		        data-cycle-timeout="0"
+		        data-cycle-fx="scrollHorz"
+		        data-cycle-swipe=true
+		        data-cycle-swipe-fx=scrollHorz
+		        data-cycle-prev=".prevControl2"
+		        data-cycle-next=".nextControl2"
+		    >
+		    	<img src="./assets/img/inspiration/waves.png">
+		        <img src="./assets/img/inspiration/lines.jpg">
+		        <img src="./assets/img/inspiration/trees.jpg">
+		        <img src="./assets/img/inspiration/butterflies.jpg">
+		    </div>
+		</div>
+	</div><!-- end div#inspirationsSlidesCont -->
 
 
 
@@ -295,9 +329,10 @@
 	    	}
 	    }
     </style>
+
     <div id="collectionsContainer">
     	<div class="twoContainer">
-    		<div id="firstSquare" class="collectionsSquare"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></div>
+    		<div id="firstSquare" class="collectionsSquare"><a href="./assets/img/collections/collections_asmart_large.jpg" title="gotta go?" rel="lightbox"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></a></div>
     		<div id="secondSquare" class="collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_aurora.png"/></div>
     	</div>
     	<div class="twoContainer">
