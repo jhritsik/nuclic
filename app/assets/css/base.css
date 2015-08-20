@@ -5,7 +5,9 @@
 		  - ANY STYLE CHANGES FOR 480 AND ABOVE = MEDIA QUERIES
 	-----*/
 
-	body, html	{ margin:0px; padding:0px; font-family: Verdana, Geneva, sans-serif; }
+	body, html	{ margin:0px; padding:0px; font-family: Verdana, Geneva, sans-serif;background-color: #ebebeb}
+	#app, body	{max-width: 1200px;border-right:0px solid #aeaeae;border-left:0px solid #aeaeae;margin: auto; }
+	#app {background-color: white;}
 	a { text-decoration: none; }
 	a:link, a:visited { color: #333; }
 	p { margin:0;padding:0; }

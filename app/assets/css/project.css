@@ -17,7 +17,6 @@
 		font-size: 14px;
 		line-height: 24px;
 	}
-
 	#inspirations, #collections, #cycAmerica {
 		display:none;
 	}
@@ -41,11 +40,13 @@
     body { overflow-x:hidden; }
     .cycle-slideshow { width: 100%; }
     .cycle-slideshow img { width: 100%; height: auto; }
-    #inspirations .slideShow2 { width: 60%; border:10px solid red;float:left;}
+    #inspirations .slideShow2 { width: 100%;}
     #inspirations .slideShow2 img { width: 100%; height: auto }
+    /*
     #inspirations #patternCont { float:left;width:20%;border:1px green;margin-left:20px;}
     #inspirations .patternSlideShow { width: 100%; position:relative;float:left;}
     #inspirations .patternSlideShow img { width: 100%; height: auto }
+    */
 
     /* pager */
     .cycle-pager { 
@@ -60,7 +61,7 @@
 
     .prevControl, .nextControl {
       position: absolute;
-      top: 46.5%;
+      top: 45%;
       z-index: 9999;
       width: 15px;
     }
@@ -75,7 +76,7 @@
 
     .prevControl2, .nextControl2 {
       position: absolute;
-      top: 46.5%;
+      top: 43.5%;
       z-index: 9999;
       width: 15px;
     }
@@ -99,7 +100,7 @@
         width: 50px;
         height: 100px; /* as the half of the width */
         background-color: #fff;
-        opacity:0.2;
+        opacity:0.4;
         border-top-right-radius: 110px;  /* 100px of height + 10px of border */
         border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
         border: 0px solid gray;
@@ -110,7 +111,27 @@
         width: 50px;
         height: 100px; /* as the half of the width */
         background-color: #fff;
-        opacity:0.2;
+        opacity:0.4;
+        border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
+        border: 0px solid gray;
+        border-bottom: 0;
+    }
+    #leftSlideShowCircle2 {
+        left:0;
+        width: 50px;
+        height: 100px; /* as the half of the width */
+        background-color: #ebebeb;
+        border-top-right-radius: 110px;  /* 100px of height + 10px of border */
+        border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
+        border: 0px solid gray;
+        border-bottom: 0;
+    }
+    #rightSlideShowCircle2 {
+        right:0;
+        width: 50px;
+        height: 100px; /* as the half of the width */
+        background-color: #ebebeb;
         border-top-left-radius: 110px;  /* 100px of height + 10px of border */
         border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
         border: 0px solid gray;
@@ -219,7 +240,8 @@
 
     .pageTitle {
         width:90%;
-        padding:20px;
+        padding:40px 20px 20px 20px;
+        margin-bottom:40px;
     }
 
     span.pageTitleMain {text-transform: uppercase;}
@@ -259,6 +281,8 @@
         .pageTitle {
             width:65%;
             padding:20px 0 50px 60px;
+            margin-top:40px;
+            margin-bottom:30px;
         }       
     }
     @media (min-width: 650px) {

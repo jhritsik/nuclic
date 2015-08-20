@@ -4,12 +4,26 @@
 		padding:10px 0;
 		border-top:1px solid #aeaeae;
 	}
-	footer img.logo {width:100px;margin:0px;}
+	#footerInfo {
+		width:100%;
+		float:left;
+		margin-bottom:20px;
+	}
+	footer .pageLinks {font-size:10px;padding:0;}
+	footer img.logo {width:80px;margin-bottom:-12px;}
+	.addthis_sharing_toolbox {margin-top:5px;}
+	@media (min-width: 480px) {
+     	#footerInfo {
+			width:60%;
+			float:left;
+		}
+		footer .pageLinks {font-size:12px;padding:0 10px;}
+    }
 </style>
 <footer>
 	<div id="footerInfo">
 		<span class="pageLinks page1"> 
-	    	<span>logo</span>
+	    	<span><img class="logo" src="../assets/img/logo.png" /></span>
 	    </span> 
 	    <span class="pageLinks page1"> 
 	    	<a href="inspirations.html">Privacy Policy</a>
@@ -17,6 +31,7 @@
 	    <span class="pageLinks page2"> 
 	    	<a href="collections.html">Terms of service</a>
 	    </span>  
-	    <div class="addthis_sharing_toolbox"></div>
+	    
 	</div>
+	<div class="addthis_sharing_toolbox"></div>
 </footer>

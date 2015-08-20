@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>title</title>
+  <title>CYC America</title>
     <!-- build:css({app,.tmp}) ./assets/css/build-main.css -->
 
 <link rel="stylesheet" href="./assets/css/base.css">
@@ -13,6 +13,7 @@
   </head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <body>
       <!-- CONTENT -->
     <style>
@@ -28,11 +29,11 @@
 		z-index: 99999;
 		background-color: #fff;
 		border-bottom:1px solid #aeaeae;
+		padding-left:50px;
+		max-width: 1150px;
 	}
 	#largeNavigation .logo {
-		width:10%;
-		float:left;
-		margin-top:2%;
+		margin-bottom:-12px;
 	}
 
 	#smallNavigation {
@@ -70,8 +71,8 @@
 	}
 	#topSmallNav {
 	}
-	img.hamburger {width:35px;margin-left:20px;}
-	img.logo {width:80px;margin-bottom:-4px;}
+	img.hamburger {width:30px;margin-left:20px;margin-top:10px;}
+	img.logo {width:80px;margin-bottom:-6px;}
 
 	@media (min-width: 650px) {
 		#largeNavigation {display:block;}
@@ -81,10 +82,9 @@
 <header>
 	<!--<a href="index.html"><img class="logo" src="../assets/img/logo.png" /></a>-->
 	<div id="largeNavigation" class="mainNavCont">
-		<!--  -->
 		<div class="navigation">
 			<span class="pageLinks page1"> 
-		    	<span>logo</span>
+		    	<img class="logo" src="../assets/img/logo.png" />
 		    </span> 
 			<span class="pageLinks page2"> 
 		    	<span>Inspirations</span>
@@ -240,13 +240,7 @@
 	<div class="pageTitle">
         <p><span class="pageTitleMain">Inspiration |</span> <span class="pageTitleDesc">Bring nature to your product</span></p>
     </div>
-    <style>
-    	#inspirationsSlidesCont {
-    		border:2px dashed red;
-    		overflow:auto;
-    		margin:0 60px;
-    	}
-    </style>
+
     <div id="inspirationsSlidesCont">
 	    <div class="slideShow2"
 	    	data-cycle-loader="wait"
@@ -259,43 +253,27 @@
 	        data-cycle-next=".nextControl2"
 	    >
 	        
-	        <img src="./assets/img/inspiration/inspirationsDisplay.png">
-	        <img src="./assets/img/inspiration/Lobby2.jpg">
-	        <img src="./assets/img/inspiration/Office.jpg">
-	        <img src="./assets/img/inspiration/Retail.jpg">
+	        <img src="./assets/img/inspiration/inspirations.png">
+	        <img src="./assets/img/inspiration/inspirations.png">
+	        <img src="./assets/img/inspiration/inspirations.png">
+	        <img src="./assets/img/inspiration/inspirations.png">
 	        <!--<img src="http://7e18a1c646f5450b9d6d-a75424f262e53e74f9539145894f4378.r8.cf3.rackcdn.com/11_13_2013-100648-southern_neighbourhood-fac-16-9-preview_39.18_thumb_169_1384349037_1384349037.jpg">-->
 
-	        <!--<div class="cycle-pager"></div>-->
-	        <div id="leftSlideShowCircle" class="slideShowCircle"></div>
-	        <div id="rightSlideShowCircle" class="slideShowCircle"></div>
+	        <div class="cycle-pager"></div>
+	        <div id="leftSlideShowCircle2" class="slideShowCircle"></div>
+	        <div id="rightSlideShowCircle2" class="slideShowCircle"></div>
 	        <span class="prevControl2"><img src="./assets/img/arrow_black_left.png" /></span>
 	        <span class="nextControl2"><img src="./assets/img/arrow_black_right.png" /></span>
 
 	    </div>
-	    <div id="patternCont">
-		    <div class="patternSlideShow"
-		    	data-cycle-loader="wait"
-		        data-cycle-speed="500" 
-		        data-cycle-timeout="0"
-		        data-cycle-fx="fadeOut"
-		        data-cycle-swipe=true
-		        data-cycle-swipe-fx=scrollHorz
-		        data-cycle-prev=".prevControl2"
-		        data-cycle-next=".nextControl2"
-		    >
-		    	<img src="./assets/img/inspiration/waves.png">
-		        <img src="./assets/img/inspiration/lines.jpg">
-		        <img src="./assets/img/inspiration/trees.jpg">
-		        <img src="./assets/img/inspiration/butterflies.jpg">
-		    </div>
-		</div>
+
 	</div><!-- end div#inspirationsSlidesCont -->
 
 
 
 </div><!-- end div#inspirations -->
 
-	<div id="collections" class="pageSection">   
+	<div id="collections" class="pageSection largeScreen">   
    <div class="pageTitle">
         <p><span class="pageTitleMain">Collections |</span> <span class="pageTitleDesc">Explore our floors</span></p>
     </div>
@@ -306,49 +284,84 @@
     		margin:0 auto;
     		overflow: auto;
     	}
-    	.collectionsSquare {
+    	.twoContainer .collectionsSquare {
     		width:100%;
     		height:auto;
     		margin-bottom:10px;
     	}
-    	.collectionsSquare:nth-child(1) {
+    	.twoContainer .collectionsSquare:nth-child(1) {
 		    float:left;
 		}
-    	.collectionsSquare:nth-child(2) {
+    	.twoContainer .collectionsSquare:nth-child(2) {
 		    float:left;
 		}
-		.collectionsSquare img {
+		.twoContainer .collectionsSquare img {
 			width:100%;
 		}
 		@media (min-width: 650px) {
-	        .collectionsSquare {
+	        .twoContainer .collectionsSquare {
 	    		width:23.7%;
 	    	}
-	    	#firstSquare, #secondSquare, #thirdSquare, #fifthSquare, #sixthSquare, #seventhSquare {
+	    	.twoContainer .firstSquare, .twoContainer .secondSquare, .twoContainer .thirdSquare, .twoContainer .fifthSquare, .twoContainer .sixthSquare, .twoContainer .seventhSquare {
 	    		margin-right:10px;
 	    	}
 	    }
+
+        #collectionsContainer2 {
+            border:2px solid red;
+            width:90%;
+            margin:0 auto;
+            overflow: auto;
+        }
+        .threeContainer .collectionsSquare {
+            width:100%;
+            height:auto;
+            margin-bottom:10px;
+        }
+        @media (min-width: 650px) {
+            .threeContainer .collectionsSquare {
+                width:23.7%;
+            }
+            .threeContainer .firstSquare, .threeContainer .secondSquare, .threeContainer .thirdSquare, .threeContainer .fifthSquare, .threeContainer .sixthSquare, .threeContainer .seventhSquare {
+                margin-right:10px;
+            }
+        }
     </style>
 
     <div id="collectionsContainer">
     	<div class="twoContainer">
-    		<div id="firstSquare" class="collectionsSquare"><a href="./assets/img/collections/collections_asmart_large.jpg" title="gotta go?" rel="lightbox"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></a></div>
-    		<div id="secondSquare" class="collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_aurora.png"/></div>
+    		<div class="firstSquare collectionsSquare"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></div>
+    		<div class="secondSquare collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_aurora.png"/></div>
     	</div>
     	<div class="twoContainer">
-    		<div id="thirdSquare" class="collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_achoice.png"/></div>
-    		<div id="fourthSquare" class="collectionsSquare"><img class="lazyload" data-expand="-80" data-src="./assets/img/collections/collections_generic.png"/></div>
+    		<div class="thirdSquare collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_achoice.png"/></div>
+    		<div class="fourthSquare collectionsSquare"><img class="lazyload" data-expand="-80" data-src="./assets/img/collections/collections_generic.png"/></div>
     	</div>
 
     	<div class="twoContainer">
-    		<div id="fifthSquare" class="collectionsSquare"><img class="lazyload" data-expand="-100" data-src="./assets/img/collections/collections_green.png"/></div>
-    		<div id="sixthSquare" class="collectionsSquare"><img class="lazyload" data-expand="-120" data-src="./assets/img/collections/collections_bestrong.png"/></div>
+    		<div class="fifthSquare collectionsSquare"><img class="lazyload" data-expand="-100" data-src="./assets/img/collections/collections_green.png"/></div>
+    		<div class="sixthSquare collectionsSquare"><img class="lazyload" data-expand="-120" data-src="./assets/img/collections/collections_bestrong.png"/></div>
     	</div>
     	<div class="twoContainer">
-    		<div id="seventhSquare" class="collectionsSquare"><img class="lazyload" data-expand="-140" data-src="./assets/img/collections/collections_aurora.png"/></div>
-    		<div id="eighthSquare" class="collectionsSquare"><img class="lazyload" data-expand="-160" data-src="./assets/img/collections/collections_generic.png"/></div>
+    		<div class="seventhSquare collectionsSquare"><img class="lazyload" data-expand="-140" data-src="./assets/img/collections/collections_aurora.png"/></div>
+    		<div class="eighthSquare collectionsSquare"><img class="lazyload" data-expand="-160" data-src="./assets/img/collections/collections_generic.png"/></div>
     	</div>
     </div>
+<!--
+    <div id="collectionsContainer2">
+        <div class="threeContainer">
+            <div class="firstSquare collectionsSquare"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></div>
+            <div class="secondSquare collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_aurora.png"/></div>
+            <div class="thirdSquare collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_achoice.png"/></div>
+        </div>
+        <div class="threeContainer">
+            <div class="fourthSquare collectionsSquare"><img class="lazyload" data-expand="-80" data-src="./assets/img/collections/collections_generic.png"/></div>        
+            <div class="fifthSquare collectionsSquare"><img class="lazyload" data-expand="-100" data-src="./assets/img/collections/collections_green.png"/></div>
+            <div class="sixthSquare collectionsSquare"><img class="lazyload" data-expand="-120" data-src="./assets/img/collections/collections_bestrong.png"/></div>
+        </div>
+
+    </div>
+-->
 </div><!-- end div #collections -->
 
 
@@ -367,7 +380,7 @@
     	}
     </style>	
     <div class="singleImgCont">
-    	<img class="lazyload" data-expand="-40" data-src="./assets/img/cycAmerica/cycAmerica.png" />
+    	<img class="lazyload" data-expand="-40" data-src="./assets/img/cycAmerica/cycAmerica.jpg" />
     </div>
 
     <section>
@@ -375,12 +388,7 @@
 	</section>
 </div><!-- end div#cycAmerica -->
 
-
-</div>
-
-
-
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="./assets/bower_components/jquery/dist/jquery.min.js"><\/script>')</script> -->
 
 <script src="./assets/bower_components/jquery/dist/jquery.min.js"></script>
@@ -409,12 +417,26 @@
 		padding:10px 0;
 		border-top:1px solid #aeaeae;
 	}
-	footer img.logo {width:100px;margin:0px;}
+	#footerInfo {
+		width:100%;
+		float:left;
+		margin-bottom:20px;
+	}
+	footer .pageLinks {font-size:10px;padding:0;}
+	footer img.logo {width:80px;margin-bottom:-12px;}
+	.addthis_sharing_toolbox {margin-top:5px;}
+	@media (min-width: 480px) {
+     	#footerInfo {
+			width:60%;
+			float:left;
+		}
+		footer .pageLinks {font-size:12px;padding:0 10px;}
+    }
 </style>
 <footer>
 	<div id="footerInfo">
 		<span class="pageLinks page1"> 
-	    	<span>logo</span>
+	    	<span><img class="logo" src="../assets/img/logo.png" /></span>
 	    </span> 
 	    <span class="pageLinks page1"> 
 	    	<a href="inspirations.html">Privacy Policy</a>
@@ -422,9 +444,16 @@
 	    <span class="pageLinks page2"> 
 	    	<a href="collections.html">Terms of service</a>
 	    </span>  
-	    <div class="addthis_sharing_toolbox"></div>
+	    
 	</div>
+	<div class="addthis_sharing_toolbox"></div>
 </footer>
+
+</div>
+
+
+
+    
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55bc436a15bcbe9d" async="async"></script>

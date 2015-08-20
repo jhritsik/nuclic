@@ -15,9 +15,11 @@ $(document).ready(function(){
 	var topLargeNavHeight = $('#largeNavigation .navigation').height();
 	var mainNavHeight = $('.mainNavHeight').height();
 	if ($('#smallNavigation').is(':visible')){
-		$('#app').css('margin-top', topSmallNavHeight)
+		$('#app').css('margin-top', topSmallNavHeight);
+		//$('#mainContainer').css('margin-top', '60px');
 	} else {
 		$('#app').css('margin-top', topLargeNavHeight);
+		//$('#mainContainer').css('margin-top', '60px');
 	}
 
 	
@@ -92,9 +94,11 @@ $(document).ready(function(){
 		var topLargeNavHeight = $('#largeNavigation .navigation').height();
 		var mainNavHeight = $('.mainNavHeight').height();
 		if ($('#smallNavigation').is(':visible')){
-			$('#app').css('margin-top', topSmallNavHeight)
+			$('#app').css('margin-top', topSmallNavHeight);
+			//$('#mainContainer').css('margin-top', '60px');
 		} else {
 			$('#app').css('margin-top', topLargeNavHeight);
+			//$('#mainContainer').css('margin-top', '60px');
 		}
 
 		if (windowWidth < 650){
