@@ -7,8 +7,22 @@ $(document).ready(function(){
 				//scrollOverflow: true
 
 			});*/
+ 
 	var windowWidth = $(window).width();
 	var windowHeight = $(window).height();
+
+	if ( windowWidth <= 640 ) {
+    	$('#mainGallery1').attr('src','./assets/img/mainGallery/Hospital_640.jpg');
+    	$('#mainGallery2').attr('src','./assets/img/mainGallery/Lobby2_640.jpg');
+    	$('#mainGallery3').attr('src','./assets/img/mainGallery/Office_640.jpg');
+    	$('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_640.jpg');
+  	} else if ( windowWidth > 640 ) {
+	    $('#mainGallery1').attr('src','./assets/img/mainGallery/Hospital_1536.jpg');
+	    $('#mainGallery2').attr('src','./assets/img/mainGallery/Lobby2_1536.jpg');
+	    $('#mainGallery3').attr('src','./assets/img/mainGallery/Office_1536.jpg');
+	    $('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_1536.jpg');
+	}
+
 
 	//var topSmallNavHeight = $('#topSmallNav').height();
 	var topSmallNavHeight = $('#smallNavigation').height();
@@ -88,6 +102,18 @@ $(document).ready(function(){
 
 		var windowWidth = $(window).width();
 		var windowHeight = $(window).height();
+
+		if ( windowWidth <= 640 ) {
+	    	$('#mainGallery1').attr('src','./assets/img/mainGallery/Hospital_640.jpg');
+	    	$('#mainGallery2').attr('src','./assets/img/mainGallery/Lobby2_640.jpg');
+	    	$('#mainGallery3').attr('src','./assets/img/mainGallery/Office_640.jpg');
+	    	$('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_640.jpg');
+	  	} else if ( windowWidth > 640 ) {
+		    $('#mainGallery1').attr('src','./assets/img/mainGallery/Hospital_1536.jpg');
+		    $('#mainGallery2').attr('src','./assets/img/mainGallery/Lobby2_1536.jpg');
+		    $('#mainGallery3').attr('src','./assets/img/mainGallery/Office_1536.jpg');
+		    $('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_1536.jpg');
+		}
 
 		//var topSmallNavHeight = $('#topSmallNav').height();
 		var topSmallNavHeight = $('#smallNavigation').height();
