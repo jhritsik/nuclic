@@ -173,6 +173,7 @@
         width:130px;
         height:130px;
         -webkit-border-radius: 100px;
+        overflow:img;
     }
     .halfRound {
         width: 65px;
@@ -201,6 +202,10 @@
     .environment .round {
         border:1px solid #66E0FF;
         opacity: 0.4;
+    }
+    .environment .round img {
+        width:137px;
+        margin-left:-25px;
     }
     .environment p.colorTag {
         color:#66E0FF;
