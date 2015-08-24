@@ -2,7 +2,7 @@
    <div class="pageTitle">
         <p><span class="pageTitleMain">Collections |</span> <span class="pageTitleDesc">Explore our floors</span></p>
     </div>
-
+<!--
     <style>
     	#collectionsContainer {
     		width:90%;
@@ -52,7 +52,8 @@
             }
         }
     </style>
-
+-->
+<!--
     <div id="collectionsContainer">
     	<div class="twoContainer">
     		<div class="firstSquare collectionsSquare"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></div>
@@ -72,19 +73,114 @@
     		<div class="eighthSquare collectionsSquare"><img class="lazyload" data-expand="-160" data-src="./assets/img/collections/collections_generic.png"/></div>
     	</div>
     </div>
-<!--
+-->
+
+    <style>
+        #collectionsContainer {
+            width:90%;
+            margin:0 auto;
+            overflow: auto;
+        }
+        .twoContainer .collectionsSquare {
+            width:100%;
+            height:auto;
+            margin-bottom:10px;
+        }
+        .twoContainer .collectionsSquare:nth-child(1) {
+            float:left;
+        }
+        .twoContainer .collectionsSquare:nth-child(2) {
+            float:left;
+        }
+        .twoContainer .collectionsSquare img {
+            width:100%;
+        }
+        @media (min-width: 650px) {
+            .twoContainer .collectionsSquare {
+                width:23.7%;
+            }
+            .twoContainer .firstSquare, .twoContainer .secondSquare, .twoContainer .thirdSquare, .twoContainer .fifthSquare, .twoContainer .sixthSquare, .twoContainer .seventhSquare {
+                margin-right:10px;
+            }
+        }
+
+        #collectionsContainer2 {
+            border:2px solid red;
+            width:90%;
+            margin:0 auto;
+            overflow: auto;
+        }
+        .threeContainer .collectionsSquare {
+            width:100%;
+            height:auto;
+            margin-bottom:10px;
+        }
+        .threeContainer .collectionsSquare:nth-child(1) {
+            float:left;
+        }
+        .threeContainer .collectionsSquare:nth-child(2) {
+            float:left;
+        }
+        .threeContainer .collectionsSquare img {
+            width:100%;
+            margin:0;
+            padding:0;
+        }
+        @media (min-width: 650px) {
+            .threeContainer {width:90%;margin:0 auto;overflow: auto;}
+            .threeContainer .collectionInfo {width:83%;margin:0 auto;overflow: auto;border:1px solid red;display: none;}
+            .threeContainer .collectionsSquare {
+                float: left;
+                width:30%;
+            }
+            .threeContainer .firstSquare, .threeContainer .fourthSquare {
+                margin-left:3.5%;
+            }
+            .threeContainer .secondSquare, .threeContainer .fifthSquare {
+                margin-left:1%;
+                margin-right:1%;
+            }
+            .threeContainer .firstSquare, .threeContainer .secondSquare, .threeContainer .thirdSquare, .threeContainer .fifthSquare, .threeContainer .sixthSquare, .threeContainer .seventhSquare {
+                
+            }
+        }
+    </style>
     <div id="collectionsContainer2">
         <div class="threeContainer">
             <div class="firstSquare collectionsSquare"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></div>
-            <div class="secondSquare collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_aurora.png"/></div>
-            <div class="thirdSquare collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_achoice.png"/></div>
+
+            <div class="secondSquare collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_asmart.png"/></div>
+            <div class="thirdSquare collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_asmart.png"/></div>
+        </div>
+        <div class="collectionInfo">
+            <div class="firstSquareInfo">
+                <p>all info on first swatch goes here</p>
+                <p>all info on first swatch goes here</p>
+                <p>all info on first swatch goes here</p>
+                <p>all info on first swatch goes here</p>
+                <p>all info on first swatch goes here</p>
+            </div>
+            <div class="secondSquareInfo">
+                <p>all info on second swatch goes here</p>
+                <p>all info on second swatch goes here</p>
+                <p>all info on second swatch goes here</p>
+                <p>all info on second swatch goes here</p>
+                <p>all info on second swatch goes here</p>
+            </div>
+            <div class="thirdSquareInfo">
+                <p>all info on third swatch goes here</p>
+                <p>all info on third swatch goes here</p>
+                <p>all info on third swatch goes here</p>
+                <p>all info on third swatch goes here</p>
+                <p>all info on third swatch goes here</p>
+            </div>
         </div>
         <div class="threeContainer">
-            <div class="fourthSquare collectionsSquare"><img class="lazyload" data-expand="-80" data-src="./assets/img/collections/collections_generic.png"/></div>        
-            <div class="fifthSquare collectionsSquare"><img class="lazyload" data-expand="-100" data-src="./assets/img/collections/collections_green.png"/></div>
-            <div class="sixthSquare collectionsSquare"><img class="lazyload" data-expand="-120" data-src="./assets/img/collections/collections_bestrong.png"/></div>
+            <div class="fourthSquare collectionsSquare"><img class="lazyload" data-expand="-80" data-src="./assets/img/collections/collections_asmart.png"/></div>
+            <div class="fifthSquare collectionsSquare"><img class="lazyload" data-expand="-100" data-src="./assets/img/collections/collections_asmart.png"/></div>
+            <div class="sixthSquare collectionsSquare"><img class="lazyload" data-expand="-120" data-src="./assets/img/collections/collections_asmart.png"/></div>
         </div>
-
     </div>
--->
+
+
 </div><!-- end div #collections -->

@@ -16,13 +16,14 @@ $(document).ready(function(){
     	$('#mainGallery2').attr('src','./assets/img/mainGallery/Lobby2_640.jpg');
     	$('#mainGallery3').attr('src','./assets/img/mainGallery/Office_640.jpg');
     	$('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_640.jpg');
+    	$('#cycAmerica .singleImgCont .lazyload').attr('data-src','./assets/img/cycAmerica/cycAmerica_640.jpg');
   	} else if ( windowWidth > 640 ) {
 	    $('#mainGallery1').attr('src','./assets/img/mainGallery/Hospital_1536.jpg');
 	    $('#mainGallery2').attr('src','./assets/img/mainGallery/Lobby2_1536.jpg');
 	    $('#mainGallery3').attr('src','./assets/img/mainGallery/Office_1536.jpg');
 	    $('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_1536.jpg');
+	    $('#cycAmerica .singleImgCont .lazyload').attr('data-src','./assets/img/cycAmerica/cycAmerica_1536.jpg');
 	}
-
 
 	//var topSmallNavHeight = $('#topSmallNav').height();
 	var topSmallNavHeight = $('#smallNavigation').height();
@@ -95,6 +96,16 @@ $(document).ready(function(){
 			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 			$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 		});
+
+		$('.firstSquare').click(function(){
+			$('.collectionInfo').toggle();
+		});
+		$('.secondSquare').click(function(){
+			$('.collectionInfo').toggle();
+		});
+		$('.thirdSquare').click(function(){
+			$('.collectionInfo').toggle();
+		});
 		
 	}
 
@@ -108,11 +119,13 @@ $(document).ready(function(){
 	    	$('#mainGallery2').attr('src','./assets/img/mainGallery/Lobby2_640.jpg');
 	    	$('#mainGallery3').attr('src','./assets/img/mainGallery/Office_640.jpg');
 	    	$('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_640.jpg');
+	    	$('#cycAmerica .singleImgCont .lazyload').attr('data-src','./assets/img/cycAmerica/cycAmerica_640.jpg');
 	  	} else if ( windowWidth > 640 ) {
 		    $('#mainGallery1').attr('src','./assets/img/mainGallery/Hospital_1536.jpg');
 		    $('#mainGallery2').attr('src','./assets/img/mainGallery/Lobby2_1536.jpg');
 		    $('#mainGallery3').attr('src','./assets/img/mainGallery/Office_1536.jpg');
 		    $('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_1536.jpg');
+		    $('#cycAmerica .singleImgCont .lazyload').attr('data-src','./assets/img/cycAmerica/cycAmerica_1536.jpg');
 		}
 
 		//var topSmallNavHeight = $('#topSmallNav').height();
