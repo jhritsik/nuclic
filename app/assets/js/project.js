@@ -86,16 +86,21 @@ $(document).ready(function(){
 		});
 		$('#largeNavigation .navigation .page2').click(function(){
 			//$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
-			$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#features').offset().top + (-60) }, 1000);
 		});
 		$('#largeNavigation .navigation .page3').click(function(){
 			//$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
-			$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
 		});
 		$('#largeNavigation .navigation .page4').click(function(){
 			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
+		});
+		$('#largeNavigation .navigation .page5').click(function(){
+			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 			$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 		});
+
 	}
 		$('.firstSquare').click(function(){
 			$('.firstSquareInfo').slideDown();
