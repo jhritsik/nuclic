@@ -96,19 +96,20 @@ $(document).ready(function(){
 			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 			$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 		});
-
+	}
 		$('.firstSquare').click(function(){
-			$('.collectionInfo').toggle();
+			$('.firstSquareInfo').slideDown();
+			$('.collectionInfoSection').hide();
 		});
 		$('.secondSquare').click(function(){
-			$('.collectionInfo').toggle();
+			$('.secondSquareInfo').slideDown();
+			$('.collectionInfoSection').hide();
 		});
 		$('.thirdSquare').click(function(){
-			$('.collectionInfo').toggle();
+			$('.thirdSquareInfo').slideDown();
+			$('.collectionInfoSection').hide();
 		});
-		
-	}
-
+});
 	$( window ).resize(function() {
 
 		var windowWidth = $(window).width();
@@ -171,7 +172,7 @@ $(document).ready(function(){
 		}
 	});
   	
-});
+
 
 
 /*

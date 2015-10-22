@@ -128,10 +128,14 @@
         }
         @media (min-width: 650px) {
             .threeContainer {width:90%;margin:0 auto;overflow: auto;}
-            .threeContainer .collectionInfo {width:83%;margin:0 auto;overflow: auto;border:1px solid red;display: none;}
+            .threeContainer .collectionInfo {width:83%;margin:0 auto;overflow: auto;border:1px solid red;}
             .threeContainer .collectionsSquare {
                 float: left;
                 width:30%;
+            }
+            .collectionInfoSection {display:none;position: relative;}
+            .firstSquareInfo {
+                border:1px dashed blue;
             }
             .threeContainer .firstSquare, .threeContainer .fourthSquare {
                 margin-left:3.5%;
@@ -153,21 +157,21 @@
             <div class="thirdSquare collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_asmart.png"/></div>
         </div>
         <div class="collectionInfo">
-            <div class="firstSquareInfo">
+            <div class="firstSquareInfo collectionInfoSection">
                 <p>all info on first swatch goes here</p>
                 <p>all info on first swatch goes here</p>
                 <p>all info on first swatch goes here</p>
                 <p>all info on first swatch goes here</p>
                 <p>all info on first swatch goes here</p>
             </div>
-            <div class="secondSquareInfo">
+            <div class="secondSquareInfo collectionInfoSection">
                 <p>all info on second swatch goes here</p>
                 <p>all info on second swatch goes here</p>
                 <p>all info on second swatch goes here</p>
                 <p>all info on second swatch goes here</p>
                 <p>all info on second swatch goes here</p>
             </div>
-            <div class="thirdSquareInfo">
+            <div class="thirdSquareInfo collectionInfoSection">
                 <p>all info on third swatch goes here</p>
                 <p>all info on third swatch goes here</p>
                 <p>all info on third swatch goes here</p>

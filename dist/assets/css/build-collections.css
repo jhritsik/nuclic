@@ -216,6 +216,8 @@
         width:130px;
         height:130px;
         -webkit-border-radius: 100px;
+        overflow:hidden;
+        float: left;
     }
     .halfRound {
         width: 65px;
@@ -229,14 +231,27 @@
 
     }
     .insideCircleBox {
-        margin-left:20%;
+        /*margin-left:20%;*/
+        margin-top:60px;
     }
-    .circleBox p:nth-child(2), .circleBox p:nth-child(3), .circleBox p:nth-child(4) {
+    /*.circleBox p:nth-child(2), .circleBox p:nth-child(3), .circleBox p:nth-child(4) {
         font-size:12px;
         color:#666;
         margin-bottom:10px;
+    }*/
+    .maintenance, .durable, .safe {margin-top:45px;}
+    .circleBox .colorText {
+
+    }
+    .circleBox .colorText p {
+        font-size:12px;
+        color:#666;
+        margin-bottom:10px;
+        width:90%;
+        margin-left:auto;
     }
     .circleBox p.colorTag {
+        margin-left:150px;
         margin-bottom:10px;
         margin-top:20px;
         font-size: 18px;
@@ -245,31 +260,70 @@
         border:1px solid #66E0FF;
         opacity: 0.4;
     }
+    .environment .round img {
+        width:137px;
+        margin-left:-25px;
+    }
     .environment p.colorTag {
         color:#66E0FF;
     }
+    .environment .colorText {
+        margin-top:50px;
+    }
     .maintenance .round {
         border:1px solid #66FF66;
-        opacity:0.2;
+        /*opacity:0.2;*/
+        opacity: 0.5;
+    }
+    .maintenance .round img {
+        width:134px;
+        margin-top:22px;
     }
     .maintenance p.colorTag {
         color:#66FF66;
+    }
+    .maintenance .colorText {
+        margin-top:50px;
     }
     .durable .round {
         border:1px solid #666;
         opacity: 0.4;
     }
+    .durable .round img {
+        width:98px;
+        margin-top:5px;
+        margin-left:20px;
+    }
     .durable p.colorTag {
         color:#666;
         margin-bottom:30px;
+    }
+    .durable .colorText {
+        margin-top:75px;
     }
     .safe .round {
         border:2px solid #FFD699;
         opacity: 0.4;
     }
+    .safe .round img {
+        width:155px;
+        margin-top:-15px;
+        margin-left:-10px;
+    }
     .safe p.colorTag {
         color: #FFD699;
         margin-bottom:30px;
+    }
+    .safe .colorText {
+        margin-top:75px;
+    }
+    .halfCircleBox .round {
+        border:1px solid #666;
+        opacity: 0.4;
+    }
+    .halfCircleBox .round img {
+        width:137px;
+        margin-left:-25px;
     }
 
 
@@ -297,10 +351,10 @@
 /* ------ TRY TO BE SPARING WITH THESE ------ */
 
     @media (max-width: 650px) {
-        .insideCircleBox {
+        /*.insideCircleBox {
             margin-left:30px;
             margin-top:-110px;
-        }
+        }*/
         .halfCircleBox {display:none;}
         .circleBox {width:90%;padding:10px;}
         .circleBox:nth-of-type(1) {
@@ -344,7 +398,24 @@
 			display:block;
 			overflow:auto;
 		}
-
+        .insideCircleBox {
+            margin-left:20%;
+            margin-top:0px;
+        }
+        .round {
+            float:none;
+        }
+        .maintenance, .durable, .safe {margin-top:0px;}
+        .circleBox p.colorTag {
+            margin-left:0;
+        }
+        .circleBox .colorText p {
+            margin-left:20%;
+            width:auto;
+        }
+        .circleBox .colorText {
+            margin-top:0;
+        }
     }
     @media (min-width: 700px) {
         .cycle-pager { 
