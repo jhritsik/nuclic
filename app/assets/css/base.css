@@ -12,6 +12,12 @@
 	a:link, a:visited { color: #333; }
 	p { margin:0;padding:0; }
 	
+	.fontLight {
+        font-family:Campton-LightDEMO;
+    }
+    .fontBold {
+        font-family:Campton-BoldDEMO;
+    }
 	.allCaps {
 		text-transform: uppercase;
 	}

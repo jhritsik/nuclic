@@ -6,10 +6,8 @@
 	.pageLinks {
 		padding:0 10px;
 		color:#666;
-		font-size:11px;
+		font-size:12px;
         letter-spacing: 2px;
-        border:1px solid red;
-        width:10%;
         float:left;
         text-align: center;
 	}
@@ -209,19 +207,23 @@
     }
     .circleBox .colorText p {
         font-size:12px;
+        line-height: 18px;
         color:#666;
         margin-bottom:10px;
         width:90%;
         margin-left:auto;
+        font-family: Campton-LightDEMO;
     }
     .circleBox p.colorTag {
         margin-left:150px;
         margin-bottom:10px;
         margin-top:20px;
         font-size: 18px;
+        /*font-family: Campton-LightDEMO;*/
+        font-family: "Palatino", Times, serif;
     }
     .environment .round {
-        border:1px solid #66E0FF;
+        border:1px solid #94e3ea;
         opacity: 0.4;
     }
     .environment .round img {
@@ -229,13 +231,13 @@
         margin-left:-25px;
     }
     .environment p.colorTag {
-        color:#66E0FF;
+        color:#94e3ea;
     }
     .environment .colorText {
         margin-top:50px;
     }
     .maintenance .round {
-        border:1px solid #66FF66;
+        border:1px solid #94e9c8;
         /*opacity:0.2;*/
         opacity: 0.5;
     }
@@ -244,13 +246,13 @@
         margin-top:22px;
     }
     .maintenance p.colorTag {
-        color:#66FF66;
+        color:#94e9c8;
     }
     .maintenance .colorText {
         margin-top:50px;
     }
     .durable .round {
-        border:1px solid #666;
+        border:1px solid #636363;
         opacity: 0.4;
     }
     .durable .round img {
@@ -259,14 +261,14 @@
         margin-left:20px;
     }
     .durable p.colorTag {
-        color:#666;
+        color:#636363;
         margin-bottom:30px;
     }
     .durable .colorText {
         margin-top:75px;
     }
     .safe .round {
-        border:2px solid #FFD699;
+        border:2px solid #f1bf66;
         opacity: 0.4;
     }
     .safe .round img {
@@ -275,7 +277,7 @@
         margin-left:-10px;
     }
     .safe p.colorTag {
-        color: #FFD699;
+        color: #f1bf66;
         margin-bottom:30px;
     }
     .safe .colorText {
@@ -305,8 +307,22 @@
         margin-bottom:40px;
     }
 
-    span.pageTitleMain {text-transform: uppercase;}
-    span.pageTitleDesc {color:#666;}
+    span.pageTitleMain {
+        text-transform: uppercase;
+        font-family:Campton-BoldDEMO;
+        color:#666;
+        font-size:12px;
+        letter-spacing:2px;
+    }
+    span.pageTitleDesc {
+        color:#999;
+        font-size:12px;
+        text-transform: uppercase;
+    }
+    span.pageTitleDivider {
+        color:#666;
+        font-size: 13px;
+    }
 
 
 

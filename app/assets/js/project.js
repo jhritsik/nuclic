@@ -52,7 +52,21 @@ $(document).ready(function(){
 		}
 	});	
 
+	// COLLECTIONS SECTION -- HIDE SHOW ARROWN AND CONTAINER
 
+	//$('#asmartContainer, #achoiceContainer, #auroraContainer, #bestrongContainer, #ecobestContainer')
+	$('#achoiceContainer, #auroraContainer, #bestrongContainer, #ecobestContainer').css('display','none');
+	//$('.asmart .downArrow, .achoice .downArrow, .aurora .downArrow, .bestrong .downArrow, .ecobest .downArrow')
+	$('.achoice .downArrow, .aurora .downArrow, .bestrong .downArrow, .ecobest .downArrow').css('display','none');
+
+	$('.selectionBox').click(function(){
+		$('.selectionBox').children('.downArrow').hide();
+		$(this).children('.downArrow').show();
+		var id = $(this).attr('id');
+		var newId = '#' + id +'Container';
+		$('.selectionBoxContainer').hide();
+		$(newId).show();
+	});
 	if (windowWidth < 650){
 		$('#smallNavigation .navigation .page1').click(function(){
 			$('#smallNavigation .navigation').hide();

@@ -15,7 +15,7 @@
 		max-width: 1170px;
 		/*background: rgba(204, 204, 204, 0.5);*/
 	}
-
+	#largeNavigation .pageLinks:first-child
 	#largeNavigation .logo {
 		float:left;
 	}
@@ -57,11 +57,19 @@
 	#topSmallNav {
 	}
 	img.hamburger {width:30px;margin-left:20px;margin-top:10px;}
-	img.logo {width:80px;margin-top:-4px;}
+	img.logo {
+		width:80px;
+		margin-top:-4px;
+		margin-left:-10px;
+	}
 
 	@media (min-width: 650px) {
 		#largeNavigation {display:block;}
+		.pageLinks {font-size:10px;margin-right:0px;}
 		#smallNavigation {display:none;}
+    }
+    @media (min-width: 768px) {
+		.pageLinks {font-size:12px;margin-right:20px;}
     }
 </style>
 <header>
@@ -71,6 +79,7 @@
 			<div class="pageLinks page1"> 
 		    	<img class="logo" src="./assets/img/cyc_logo_final.png" />
 		    </div> 
+
 		    <span class="pageLinks page2"> 
 		    	<span>Features</span>
 		    </span>
@@ -84,8 +93,9 @@
 		    	<span>CYC America</span>
 		    </span>
 		    <span class="pageLinks page6">
-		    	<span>Contact Us</span>
-		    </span>   
+		    	<span><a href="mailto:info@nuclic.com?Subject=Questions%20About%20Flooring" target="_top">Contact Us</a></span>
+		    </span>  
+
 		</div>
 	</div>
 	<div id="smallNavigation" class="mainNavCont">
@@ -96,19 +106,23 @@
 		</div>
 
 		<div class="navigation">
-			<div class="pageLinks page1"> 
+			<!--<div class="pageLinks page1"> 
 		    	<span>Home</span>
 		    </div> 
-			<div class="pageLinks page2"> 
+		-->
+			<span class="pageLinks page2"> 
+		    	<span>Features</span>
+		    </span>
+			<span class="pageLinks page3"> 
 		    	<span>Inspirations</span>
-		    </div> 
-		    <div class="pageLinks page3"> 
+		    </span> 
+		    <span class="pageLinks page4"> 
 		    	<span>Collections</span>
-		    </div> 
-		    <div class="pageLinks page4">
+		    </span> 
+		    <span class="pageLinks page5">
 		    	<span>CYC America</span>
-		    </div>
-		    <div class="pageLinks page5">
+		    </span>
+		    <div class="pageLinks ">
 		    	<span>Contact Us</span>
 		    </div>    
 		    <div class="pageLinks">

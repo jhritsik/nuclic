@@ -1,190 +1,122 @@
 <div id="collections" class="pageSection largeScreen">   
    <div class="pageTitle">
-        <p><span class="pageTitleMain">Collections |</span> <span class="pageTitleDesc">Explore our floors</span></p>
+        <p><span class="pageTitleMain">Collections</span> <span class="pageTitleDivider">|</span> <span class="pageTitleDesc">Explore our floors</span></p>
     </div>
-<!--
     <style>
-    	#collectionsContainer {
-    		width:90%;
-    		margin:0 auto;
-    		overflow: auto;
-    	}
-    	.twoContainer .collectionsSquare {
-    		width:100%;
-    		height:auto;
-    		margin-bottom:10px;
-    	}
-    	.twoContainer .collectionsSquare:nth-child(1) {
-		    float:left;
-		}
-    	.twoContainer .collectionsSquare:nth-child(2) {
-		    float:left;
-		}
-		.twoContainer .collectionsSquare img {
-			width:100%;
-		}
-		@media (min-width: 650px) {
-	        .twoContainer .collectionsSquare {
-	    		width:23.7%;
-	    	}
-	    	.twoContainer .firstSquare, .twoContainer .secondSquare, .twoContainer .thirdSquare, .twoContainer .fifthSquare, .twoContainer .sixthSquare, .twoContainer .seventhSquare {
-	    		margin-right:10px;
-	    	}
-	    }
-
-        #collectionsContainer2 {
-            border:2px solid red;
+        #collectionsAllRows {
             width:90%;
-            margin:0 auto;
+            overflow: auto;
+            margin-left:5%;
+        }
+        #collectionsAllRows p.selectQuestion {
+            font-family: font-family:Campton-LightDEMO;
+            font-size: 11px;
+            color:#666;
+            letter-spacing: 2px;
+            margin-bottom:12px;
+        }
+        .selectionBox {float:left;width:19%;}
+        .selectionBox img {width:100%;}
+        .selectionBox img.downArrow {width:15%;margin-left:40%;}
+        .mainRow {overflow:auto;margin-bottom:50px;}
+        .collectionsRow {overflow:auto;margin-bottom:25px;}
+        .asmart, .aurora, .achoice, .bestrong {margin-right:1.2%;}
+        .selectionBoxTitle {
+            color:#999;
+            font-size:10px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .featuresContainer {
+            overflow: auto;
+            background-color: #f9f8f4;
+            padding:50px 0 80px 0;
+            margin-top:50px;
+        }
+
+        .featuresContainer p.section {
+            width:80%;
+            margin-left:10%;
+            font-size:12px;
+            line-height: 22px;
+            color:#666;
+            text-align: center;
+            padding:15px 0 30px 0;
+        }
+        .featuresContainer p.pageTitleMain {
+            text-transform: uppercase;
+            font-family:Campton-BoldDEMO;
+            color:#666;
+            font-size:12px;
+            letter-spacing:2px;
+            text-align: center;
+        }
+        .featuresContainerChart {
+            width:80%;
+            margin-left:10%;
+            padding-top:30px;
+        }
+        .featuresContainerChart .leftRight {
+            width:90%;
+            margin-left:5%;
+            border-top:1px solid #d0cfcd;
             overflow: auto;
         }
-        .threeContainer .collectionsSquare {
-            width:100%;
-            height:auto;
-            margin-bottom:10px;
+        .featuresContainerChart .left {
+            float:left;
+            margin-left:30px;
         }
-        @media (min-width: 650px) {
-            .threeContainer .collectionsSquare {
-                width:23.7%;
-            }
-            .threeContainer .firstSquare, .threeContainer .secondSquare, .threeContainer .thirdSquare, .threeContainer .fifthSquare, .threeContainer .sixthSquare, .threeContainer .seventhSquare {
-                margin-right:10px;
-            }
+        .featuresContainerChart .right {
+            float:right;
+            margin-right:10px;
+            width:20%;
+        }
+        .leftRight p {
+            line-height: 30px;
+            font-size:12px;
+        }
+        .featuresContainerChart .left p {
+            font-family:Campton-BoldDEMO;
+            color:#444;
+        }
+        .featuresContainerChart .right p {
+            font-family:Campton-LightDEMO;
+            color:#666;
         }
     </style>
--->
-<!--
-    <div id="collectionsContainer">
-    	<div class="twoContainer">
-    		<div class="firstSquare collectionsSquare"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></div>
-    		<div class="secondSquare collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_aurora.png"/></div>
-    	</div>
-    	<div class="twoContainer">
-    		<div class="thirdSquare collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_achoice.png"/></div>
-    		<div class="fourthSquare collectionsSquare"><img class="lazyload" data-expand="-80" data-src="./assets/img/collections/collections_generic.png"/></div>
-    	</div>
 
-    	<div class="twoContainer">
-    		<div class="fifthSquare collectionsSquare"><img class="lazyload" data-expand="-100" data-src="./assets/img/collections/collections_green.png"/></div>
-    		<div class="sixthSquare collectionsSquare"><img class="lazyload" data-expand="-120" data-src="./assets/img/collections/collections_bestrong.png"/></div>
-    	</div>
-    	<div class="twoContainer">
-    		<div class="seventhSquare collectionsSquare"><img class="lazyload" data-expand="-140" data-src="./assets/img/collections/collections_aurora.png"/></div>
-    		<div class="eighthSquare collectionsSquare"><img class="lazyload" data-expand="-160" data-src="./assets/img/collections/collections_generic.png"/></div>
-    	</div>
-    </div>
--->
-
-    <style>
-        #collectionsContainer {
-            width:90%;
-            margin:0 auto;
-            overflow: auto;
-        }
-        .twoContainer .collectionsSquare {
-            width:100%;
-            height:auto;
-            margin-bottom:10px;
-        }
-        .twoContainer .collectionsSquare:nth-child(1) {
-            float:left;
-        }
-        .twoContainer .collectionsSquare:nth-child(2) {
-            float:left;
-        }
-        .twoContainer .collectionsSquare img {
-            width:100%;
-        }
-        @media (min-width: 650px) {
-            .twoContainer .collectionsSquare {
-                width:23.7%;
-            }
-            .twoContainer .firstSquare, .twoContainer .secondSquare, .twoContainer .thirdSquare, .twoContainer .fifthSquare, .twoContainer .sixthSquare, .twoContainer .seventhSquare {
-                margin-right:10px;
-            }
-        }
-
-        #collectionsContainer2 {
-            border:2px solid red;
-            width:90%;
-            margin:0 auto;
-            overflow: auto;
-        }
-        .threeContainer .collectionsSquare {
-            width:100%;
-            height:auto;
-            margin-bottom:10px;
-        }
-        .threeContainer .collectionsSquare:nth-child(1) {
-            float:left;
-        }
-        .threeContainer .collectionsSquare:nth-child(2) {
-            float:left;
-        }
-        .threeContainer .collectionsSquare img {
-            width:100%;
-            margin:0;
-            padding:0;
-        }
-        @media (min-width: 650px) {
-            .threeContainer {width:90%;margin:0 auto;overflow: auto;}
-            .threeContainer .collectionInfo {width:83%;margin:0 auto;overflow: auto;border:1px solid red;}
-            .threeContainer .collectionsSquare {
-                float: left;
-                width:30%;
-            }
-            .collectionInfoSection {display:none;position: relative;}
-            .firstSquareInfo {
-                border:1px dashed blue;
-            }
-            .threeContainer .firstSquare, .threeContainer .fourthSquare {
-                margin-left:3.5%;
-            }
-            .threeContainer .secondSquare, .threeContainer .fifthSquare {
-                margin-left:1%;
-                margin-right:1%;
-            }
-            .threeContainer .firstSquare, .threeContainer .secondSquare, .threeContainer .thirdSquare, .threeContainer .fifthSquare, .threeContainer .sixthSquare, .threeContainer .seventhSquare {
-                
-            }
-        }
-    </style>
-    <div id="collectionsContainer2">
-        <div class="threeContainer">
-            <div class="firstSquare collectionsSquare"><img class="lazyload" data-expand="-20" data-src="./assets/img/collections/collections_asmart.png"/></div>
-
-            <div class="secondSquare collectionsSquare"><img class="lazyload" data-expand="-40" data-src="./assets/img/collections/collections_asmart.png"/></div>
-            <div class="thirdSquare collectionsSquare"><img class="lazyload" data-expand="-60" data-src="./assets/img/collections/collections_asmart.png"/></div>
-        </div>
-        <div class="collectionInfo">
-            <div class="firstSquareInfo collectionInfoSection">
-                <p>all info on first swatch goes here</p>
-                <p>all info on first swatch goes here</p>
-                <p>all info on first swatch goes here</p>
-                <p>all info on first swatch goes here</p>
-                <p>all info on first swatch goes here</p>
+    <div id="collectionsAllRows">
+        <p class="selectQuestion">Select a Collection to view</p>
+        <div class="mainRow">
+            <div id="asmart" class="asmart selectionBox">
+                <img src="./assets/img/collections/asmart.jpg" />
+                <img class="downArrow" src="./assets/img/collections/downArrow2.png" />
             </div>
-            <div class="secondSquareInfo collectionInfoSection">
-                <p>all info on second swatch goes here</p>
-                <p>all info on second swatch goes here</p>
-                <p>all info on second swatch goes here</p>
-                <p>all info on second swatch goes here</p>
-                <p>all info on second swatch goes here</p>
+            <div id="aurora" class="aurora selectionBox">
+                <img src="./assets/img/collections/aurora.jpg" />
+                <img class="downArrow" src="./assets/img/collections/downArrow2.png" />
             </div>
-            <div class="thirdSquareInfo collectionInfoSection">
-                <p>all info on third swatch goes here</p>
-                <p>all info on third swatch goes here</p>
-                <p>all info on third swatch goes here</p>
-                <p>all info on third swatch goes here</p>
-                <p>all info on third swatch goes here</p>
+            <div id="achoice" class="achoice selectionBox">
+                <img src="./assets/img/collections/achoice.jpg" />
+                <img class="downArrow" src="./assets/img/collections/downArrow2.png" />
+            </div>
+            <div id="bestrong" class="bestrong selectionBox">
+                <img src="./assets/img/collections/bestrong.jpg" />
+                <img class="downArrow" src="./assets/img/collections/downArrow2.png" />
+            </div>
+            <div id="ecobest" class="ecobest selectionBox">
+                <img src="./assets/img/collections/ecobest.jpg" />
+                <img class="downArrow" src="./assets/img/collections/downArrow2.png" />
             </div>
         </div>
-        <div class="threeContainer">
-            <div class="fourthSquare collectionsSquare"><img class="lazyload" data-expand="-80" data-src="./assets/img/collections/collections_asmart.png"/></div>
-            <div class="fifthSquare collectionsSquare"><img class="lazyload" data-expand="-100" data-src="./assets/img/collections/collections_asmart.png"/></div>
-            <div class="sixthSquare collectionsSquare"><img class="lazyload" data-expand="-120" data-src="./assets/img/collections/collections_asmart.png"/></div>
-        </div>
-    </div>
+        {{> collections_asmart}}
+        {{> collections_aurora}}
+        {{> collections_achoice}}
+        {{> collections_bestrong}}
+        {{> collections_ecobest}}
+
+        
 
 
 </div><!-- end div #collections -->
