@@ -5645,7 +5645,21 @@ $(document).ready(function(){
 		}
 	});	
 
+	// COLLECTIONS SECTION -- HIDE SHOW ARROWN AND CONTAINER
 
+	//$('#asmartContainer, #achoiceContainer, #auroraContainer, #bestrongContainer, #ecobestContainer')
+	$('#achoiceContainer, #auroraContainer, #bestrongContainer, #ecobestContainer').css('display','none');
+	//$('.asmart .downArrow, .achoice .downArrow, .aurora .downArrow, .bestrong .downArrow, .ecobest .downArrow')
+	$('.achoice .downArrow, .aurora .downArrow, .bestrong .downArrow, .ecobest .downArrow').css('display','none');
+
+	$('.selectionBox').click(function(){
+		$('.selectionBox').children('.downArrow').hide();
+		$(this).children('.downArrow').show();
+		var id = $(this).attr('id');
+		var newId = '#' + id +'Container';
+		$('.selectionBoxContainer').hide();
+		$(newId).show();
+	});
 	if (windowWidth < 650){
 		$('#smallNavigation .navigation .page1').click(function(){
 			$('#smallNavigation .navigation').hide();
@@ -5679,29 +5693,35 @@ $(document).ready(function(){
 		});
 		$('#largeNavigation .navigation .page2').click(function(){
 			//$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
-			$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#features').offset().top + (-60) }, 1000);
 		});
 		$('#largeNavigation .navigation .page3').click(function(){
 			//$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
-			$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
 		});
 		$('#largeNavigation .navigation .page4').click(function(){
+			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
+		});
+		$('#largeNavigation .navigation .page5').click(function(){
 			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 			$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
 		});
 
+	}
 		$('.firstSquare').click(function(){
-			$('.collectionInfo').toggle();
+			$('.firstSquareInfo').slideDown();
+			$('.collectionInfoSection').hide();
 		});
 		$('.secondSquare').click(function(){
-			$('.collectionInfo').toggle();
+			$('.secondSquareInfo').slideDown();
+			$('.collectionInfoSection').hide();
 		});
 		$('.thirdSquare').click(function(){
-			$('.collectionInfo').toggle();
+			$('.thirdSquareInfo').slideDown();
+			$('.collectionInfoSection').hide();
 		});
-		
-	}
-
+});
 	$( window ).resize(function() {
 
 		var windowWidth = $(window).width();
@@ -5764,7 +5784,7 @@ $(document).ready(function(){
 		}
 	});
   	
-});
+
 
 
 /*

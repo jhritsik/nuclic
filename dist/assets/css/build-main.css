@@ -12,10 +12,16 @@
 	a:link, a:visited { color: #333; }
 	p { margin:0;padding:0; }
 	
+	.fontLight {
+        font-family:Campton-LightDEMO;
+    }
+    .fontBold {
+        font-family:Campton-BoldDEMO;
+    }
 	.allCaps {
 		text-transform: uppercase;
 	}
-	.pageLinks 							{ text-transform: uppercase; font-size: 14px; font-family: "pragmatica-web", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif; margin-right: 20px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+	.pageLinks 							{ text-transform: uppercase; font-size: 14px; font-family: Campton-boldDEMO, "pragmatica-web", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif; margin-right: 20px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 	.pageLinks a, .pageLinks a:visited 	{ text-decoration: none; border-bottom: 0}
     .page1 .pageLinks.page1 a,
     .page2 .pageLinks.page2 a,
@@ -48,11 +54,14 @@
 	}
 	.pageLinks {
 		padding:0 10px;
-		color:#000;
+		color:#666;
 		font-size:12px;
+        letter-spacing: 2px;
+        float:left;
+        text-align: center;
 	}
 	.pageLinks a:link, a:visited {
-	    color: #000;
+	    color: #666;
 	}
 	.footerLinks { color: #999; }
 	footer {
@@ -184,12 +193,14 @@
         position: absolute;
         z-index: 999;
         bottom: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 50px;
         margin-left: 5%;
         color:white;
+        letter-spacing: 1px;
     }
     #slideShowTitle span { 
-        font-family: "pragmatica-web", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+        font-family: "Palatino", Times, serif;
+        /*font-family: Campton-lightDEMO;*/
         font-size:18px;
     }
     .circles {
@@ -245,19 +256,23 @@
     }
     .circleBox .colorText p {
         font-size:12px;
+        line-height: 18px;
         color:#666;
         margin-bottom:10px;
         width:90%;
         margin-left:auto;
+        font-family: Campton-LightDEMO;
     }
     .circleBox p.colorTag {
         margin-left:150px;
         margin-bottom:10px;
         margin-top:20px;
         font-size: 18px;
+        /*font-family: Campton-LightDEMO;*/
+        font-family: "Palatino", Times, serif;
     }
     .environment .round {
-        border:1px solid #66E0FF;
+        border:1px solid #94e3ea;
         opacity: 0.4;
     }
     .environment .round img {
@@ -265,13 +280,13 @@
         margin-left:-25px;
     }
     .environment p.colorTag {
-        color:#66E0FF;
+        color:#94e3ea;
     }
     .environment .colorText {
         margin-top:50px;
     }
     .maintenance .round {
-        border:1px solid #66FF66;
+        border:1px solid #94e9c8;
         /*opacity:0.2;*/
         opacity: 0.5;
     }
@@ -280,13 +295,13 @@
         margin-top:22px;
     }
     .maintenance p.colorTag {
-        color:#66FF66;
+        color:#94e9c8;
     }
     .maintenance .colorText {
         margin-top:50px;
     }
     .durable .round {
-        border:1px solid #666;
+        border:1px solid #636363;
         opacity: 0.4;
     }
     .durable .round img {
@@ -295,14 +310,14 @@
         margin-left:20px;
     }
     .durable p.colorTag {
-        color:#666;
+        color:#636363;
         margin-bottom:30px;
     }
     .durable .colorText {
         margin-top:75px;
     }
     .safe .round {
-        border:2px solid #FFD699;
+        border:2px solid #f1bf66;
         opacity: 0.4;
     }
     .safe .round img {
@@ -311,7 +326,7 @@
         margin-left:-10px;
     }
     .safe p.colorTag {
-        color: #FFD699;
+        color: #f1bf66;
         margin-bottom:30px;
     }
     .safe .colorText {
@@ -341,8 +356,22 @@
         margin-bottom:40px;
     }
 
-    span.pageTitleMain {text-transform: uppercase;}
-    span.pageTitleDesc {color:#666;}
+    span.pageTitleMain {
+        text-transform: uppercase;
+        font-family:Campton-BoldDEMO;
+        color:#666;
+        font-size:12px;
+        letter-spacing:2px;
+    }
+    span.pageTitleDesc {
+        color:#999;
+        font-size:12px;
+        text-transform: uppercase;
+    }
+    span.pageTitleDivider {
+        color:#666;
+        font-size: 13px;
+    }
 
 
 
@@ -430,3 +459,38 @@
     }
     @media (min-width: 960px) {
     }
+;
+/**
+ * @license
+ * MyFonts Webfont Build ID 3111925, 2015-10-21T23:36:45-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Campton-LightDEMO by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/campton/light-demo/
+ * 
+ * Webfont: Campton-BoldDEMO by Rene Bieder
+ * URL: http://www.myfonts.com/fonts/rene-bieder/campton/bold-demo/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3111925
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2014 by Ren&#x00E9; Bieder. All rights reserved.
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2f7bf5");
+
+  
+@font-face {font-family: 'Campton-LightDEMO';src: url('webfonts/2F7BF5_0_0.eot');src: url('webfonts/2F7BF5_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F7BF5_0_0.woff2') format('woff2'),url('webfonts/2F7BF5_0_0.woff') format('woff'),url('webfonts/2F7BF5_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Campton-BoldDEMO';src: url('webfonts/2F7BF5_1_0.eot');src: url('webfonts/2F7BF5_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F7BF5_1_0.woff2') format('woff2'),url('webfonts/2F7BF5_1_0.woff') format('woff'),url('webfonts/2F7BF5_1_0.ttf') format('truetype');}
+ 

@@ -259,7 +259,7 @@ module.exports = function (grunt) {
             '!assets/js/**/*', // except js 
             '!assets/bower_components/**/*', // except bower components -- usemin consolidates to /js locations
             'assets/bower_components/jquery/dist/jquery.min.js', // this is only here because "window.jQuery || ..." has to exist outside of usemin blocks
-            '!assets/css/**/*', // except css
+            //'!assets/css/**/*', // except css
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}',
             //'favicon.ico',

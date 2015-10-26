@@ -21,7 +21,7 @@
 		line-height: 24px;
 	}
 	#inspirations, #collections, #cycAmerica {
-		display:none;
+		/*display:none;*/
 	}
 	/* ------ BEGIN CSS FOR LAZYLOADING IMAGES ------ */
 	.lazyload,
@@ -174,6 +174,7 @@
         margin-left:20px;
     }
     .round {
+        display:none;
         border:1px solid green;
         width:130px;
         height:130px;
@@ -194,7 +195,7 @@
     }
     .insideCircleBox {
         /*margin-left:20%;*/
-        margin-top:60px;
+        margin-top:0px;
     }
     /*.circleBox p:nth-child(2), .circleBox p:nth-child(3), .circleBox p:nth-child(4) {
         font-size:12px;
@@ -331,10 +332,14 @@
 /* ------ TRY TO BE SPARING WITH THESE ------ */
 
     @media (max-width: 650px) {
-        /*.insideCircleBox {
-            margin-left:30px;
-            margin-top:-110px;
-        }*/
+        .circleBox .colorText {
+            margin-top:0px;
+        }
+        .circleBox p.colorTag {
+            width:90%;
+            margin-left:auto;
+        }
+        .maintenance, .durable, .safe {margin-top:0px;}
         .halfCircleBox {display:none;}
         .circleBox {width:90%;padding:10px;}
         .circleBox:nth-of-type(1) {
@@ -344,6 +349,7 @@
             margin-bottom:10px;
         }
         .circles {width:100%;overflow:hidden;}
+        .circleBox.environment {margin-top:-30px;}
     }
 
 
@@ -384,6 +390,7 @@
         }
         .round {
             float:none;
+            display:block;
         }
         .maintenance, .durable, .safe {margin-top:0px;}
         .circleBox p.colorTag {

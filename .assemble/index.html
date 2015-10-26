@@ -45,7 +45,7 @@
 		background-color: #fff;
 		border-bottom: 1px solid #aeaeae;
 		width: 100%;
-		height:50px;
+		height:60px;
 		display: block
 	}
 	#smallNavigation .navigation {
@@ -68,14 +68,16 @@
 	}
 	#smallNavigation .pageLinks {
 		clear:both;
+		width: 100%;
 		text-align: center;
-		margin:20px 0;
+		margin:20px 0 0 0;
 		border-bottom:1px solid #aeaeae;
 		padding-bottom:20px;
 	}
 	#topSmallNav {
 	}
-	img.hamburger {width:30px;margin-left:20px;margin-top:10px;}
+	#topSmallNav img.logo {margin-top:-5px;}
+	img.hamburger {width:30px;margin-left:20px;margin-bottom:15px;}
 	img.logo {
 		width:80px;
 		margin-top:-4px;
@@ -125,10 +127,9 @@
 		</div>
 
 		<div class="navigation">
-			<!--<div class="pageLinks page1"> 
+			<div class="pageLinks page1"> 
 		    	<span>Home</span>
 		    </div> 
-		-->
 			<span class="pageLinks page2"> 
 		    	<span>Features</span>
 		    </span>
@@ -142,10 +143,10 @@
 		    	<span>CYC America</span>
 		    </span>
 		    <div class="pageLinks ">
-		    	<span>Contact Us</span>
+		    	<span><a href="mailto:info@nuclic.com?Subject=Questions%20About%20Flooring" target="_top">Email Us</a></span>
 		    </div>    
 		    <div class="pageLinks">
-		    	<a href="tel:1234567">Call 123-4567</a>
+		    	<a href="tel:347-370-9419">Call Us</a>
 		    </div>
 		    <div class="pageLinks">
 		    	<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a>
@@ -323,7 +324,11 @@
         .selectionBox {float:left;width:19%;}
         .selectionBox img {width:100%;}
         .selectionBox img.downArrow {width:15%;margin-left:40%;}
-        .mainRow {overflow:auto;margin-bottom:50px;}
+
+        .mainRow {overflow:auto;margin-bottom:20px;}
+        @media (min-width: 650px) {
+            .mainRow {margin-bottom:50px;}
+        }
         .collectionsRow {overflow:auto;margin-bottom:25px;}
         .asmart, .aurora, .achoice, .bestrong {margin-right:1.2%;}
         .selectionBoxTitle {
@@ -599,7 +604,8 @@
         </div>
     </div>
 </div><!-- end div asmartContainer -->
-        <div id="achoiceContainer" class="selectionBoxContainer">
+        <!--<img class="lazyload" data-expand="-40" data-src="./assets/img/cycAmerica/cycAmerica_1536.jpg" /> -->
+<div id="achoiceContainer" class="selectionBoxContainer">
     <div class="collectionsRow firstRow asmartFirstRow">
         <div class="asmart selectionBox">
             <img src="./assets/img/collections/achoice/1.jpg" />
