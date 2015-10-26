@@ -264,15 +264,8 @@ module.exports = function (grunt) {
             '!**/_*{,/**}',
             //'favicon.ico',
             //'apple-touch*.png'
-          
           ],
           dest: '<%= yeoman.dist %>'
-        },
-          expand: true,
-          dot: true,
-          cwd: 'assets/css/webfonts',
-          src: ['webfonts/*.*'],
-          dest: '<%= config.dist %>'
         }]
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
