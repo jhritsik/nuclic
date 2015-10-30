@@ -1,3 +1,10 @@
+<script id="images" type="text/cycle">
+[
+    "<img id='mainGallery2' class='mainGalleryImg' src='./assets/img/mainGallery/Lobby2_1536.jpg'>",
+    "<img id='mainGallery3' class='mainGalleryImg' src='./assets/img/mainGallery/Office_1536.jpg'>",
+    "<img id='m'ainGallery4' class='mainGalleryImg' src='./assets/img/mainGallery/Retail_1536.jpg'>"
+]
+</script>
 <div id="slideShowCont" class="pageSection">
     <div class="cycle-slideshow"
         data-cycle-loader="wait"
@@ -8,12 +15,16 @@
         data-cycle-swipe-fx=scrollHorz
         data-cycle-prev=".prevControl"
         data-cycle-next=".nextControl"
+        data-cycle-loader="true"
+        data-cycle-progressive="#images"
     >
               
         <img id="mainGallery1" class="mainGalleryImg" src="./assets/img/mainGallery/Hospital_1536.jpg">
+        <!--
         <img id="mainGallery2" class="mainGalleryImg" src="./assets/img/mainGallery/Lobby2_1536.jpg">
         <img id="mainGallery3" class="mainGalleryImg" src="./assets/img/mainGallery/Office_1536.jpg">
         <img id="mainGallery4" class="mainGalleryImg" src="./assets/img/mainGallery/Retail_1536.jpg">
+    -->
 
         <div class="cycle-pager"></div>
         <div id="leftSlideShowCircle" class="slideShowCircle"></div>

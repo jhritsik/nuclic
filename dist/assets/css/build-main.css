@@ -13,7 +13,7 @@
 	p { margin:0;padding:0; }
 	
 	.fontLight {
-        font-family:Campton-LightDEMO;
+        /*font-family:Campton-LightDEMO;*/
     }
     .fontBold {
         font-family:Campton-BoldDEMO;
@@ -262,7 +262,7 @@
         margin-bottom:10px;
         width:90%;
         margin-left:auto;
-        font-family: Campton-LightDEMO;
+        /*font-family: Campton-LightDEMO;*/
     }
     .circleBox p.colorTag {
         margin-left:150px;

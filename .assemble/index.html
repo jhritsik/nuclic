@@ -2,6 +2,8 @@
 <html>
   <head>
   <title>CYC America</title>
+    <script src="https://use.typekit.net/mxw0rjk.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <!-- build:css({app,.tmp}) ./assets/css/build-main.css -->
 
 <link rel="stylesheet" href="./assets/css/base.css">
@@ -91,7 +93,14 @@
 
 
 
-	<div id="slideShowCont" class="pageSection">
+	<script id="images" type="text/cycle">
+[
+    "<img id='mainGallery2' class='mainGalleryImg' src='./assets/img/mainGallery/Lobby2_1536.jpg'>",
+    "<img id='mainGallery3' class='mainGalleryImg' src='./assets/img/mainGallery/Office_1536.jpg'>",
+    "<img id='m'ainGallery4' class='mainGalleryImg' src='./assets/img/mainGallery/Retail_1536.jpg'>"
+]
+</script>
+<div id="slideShowCont" class="pageSection">
     <div class="cycle-slideshow"
         data-cycle-loader="wait"
         data-cycle-speed="1000" 
@@ -101,12 +110,16 @@
         data-cycle-swipe-fx=scrollHorz
         data-cycle-prev=".prevControl"
         data-cycle-next=".nextControl"
+        data-cycle-loader="true"
+        data-cycle-progressive="#images"
     >
               
         <img id="mainGallery1" class="mainGalleryImg" src="./assets/img/mainGallery/Hospital_1536.jpg">
+        <!--
         <img id="mainGallery2" class="mainGalleryImg" src="./assets/img/mainGallery/Lobby2_1536.jpg">
         <img id="mainGallery3" class="mainGalleryImg" src="./assets/img/mainGallery/Office_1536.jpg">
         <img id="mainGallery4" class="mainGalleryImg" src="./assets/img/mainGallery/Retail_1536.jpg">
+    -->
 
         <div class="cycle-pager"></div>
         <div id="leftSlideShowCircle" class="slideShowCircle"></div>
@@ -725,7 +738,7 @@
 </div><!-- end div #collections -->
 
 
-	<div id ="cycAmerica" class="pageSection">
+	tf6r5de<div id ="cycAmerica" class="pageSection">
     <div class="pageTitle">
         <p><span class="pageTitleMain">CYC America</span> <span class="pageTitleDivider">|</span> <span class="pageTitleDesc">Chinyang Chemical</span></p>
     </div>
@@ -757,6 +770,8 @@
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="./assets/bower_components/jquery/dist/jquery.min.js"><\/script>')</script> -->
 
+
+
 <script src="./assets/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 
@@ -776,6 +791,7 @@
 
 
 <!-- endbuild -->
+
 
     
 <footer>
