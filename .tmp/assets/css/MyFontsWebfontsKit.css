@@ -24,6 +24,7 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
+
 @import url("//hello.myfonts.net/count/2f7bf5");
 
   
@@ -32,3 +33,14 @@
   
 @font-face {font-family: 'Campton-BoldDEMO';src: url('webfonts/2F7BF5_1_0.eot');src: url('webfonts/2F7BF5_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F7BF5_1_0.woff2') format('woff2'),url('webfonts/2F7BF5_1_0.woff') format('woff'),url('webfonts/2F7BF5_1_0.ttf') format('truetype');}
  
+
+@import url("//hello.myfonts.net/count/2f8f71");
+
+  
+@font-face {font-family: 'Campton-Light';src: url('webfonts/2F8F71_0_0.eot');src: url('webfonts/2F8F71_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F8F71_0_0.woff2') format('woff2'),url('webfonts/2F8F71_0_0.woff') format('woff'),url('webfonts/2F8F71_0_0.ttf') format('truetype');}
+ 
+
+@font-face {
+	font-family: 'museoSlab';
+	src: url("webfonts/MuseoSlab-300.otf") format("opentype");
+}
