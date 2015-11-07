@@ -5,7 +5,7 @@
 		  - ANY STYLE CHANGES FOR 480 AND ABOVE = MEDIA QUERIES
 	-----*/
 
-	body, html	{ margin:0px; padding:0px; font-family: Verdana, Geneva, sans-serif;background-color: #ebebeb}
+	body, html	{ margin:0px; padding:0px; font-family: Verdana, Geneva, sans-serif;background-color: #f2f2f2}
 	#app, body	{max-width: 1200px;border-right:0px solid #aeaeae;border-left:0px solid #aeaeae;margin: auto; }
 	#app {background-color: white;}
 	a { text-decoration: none; }
@@ -54,7 +54,7 @@
 	}
 	.pageLinks {
 		padding:0 10px;
-		color:#666;
+		color:#4a4a4a;
 		font-size:12px;
         letter-spacing: 2px;
         float:left;
@@ -113,32 +113,28 @@
 
     .prevControl, .nextControl {
       position: absolute;
-      top: 45%;
+      top: 37%;
       z-index: 9999;
-      width: 15px;
+      width: 5%;
     }
     .prevControl {
         left:0;
-        margin-left:10px;
     }
     .nextControl {
         right:0;
-        margin-right:10px;
     }
 
     .prevControl2, .nextControl2 {
       position: absolute;
-      top: 43.5%;
+      top: 37%;
       z-index: 9999;
-      width: 15px;
+      width: 5%;
     }
     .prevControl2 {
         left:0;
-        margin-left:10px;
     }
     .nextControl2 {
         right:0;
-        margin-right:10px;
     }
     /* jaimes css */
     .slideShowCircle {
@@ -199,10 +195,8 @@
         letter-spacing: 1px;
     }
     #slideShowTitle span { 
-        font-family: "museo-slab",serif;
-         color:red;
         /*font-family: "Palatino", Times, serif;*/
-        /*font-family: Campton-lightDEMO;*/
+        font-family: museoSlab;
         font-size:18px;
     }
     .circles {
@@ -260,19 +254,20 @@
     .circleBox .colorText p {
         font-size:12px;
         line-height: 18px;
-        color:#666;
+        color:#4a4a4a;
         margin-bottom:10px;
         width:90%;
         margin-left:auto;
-        /*font-family: Campton-LightDEMO;*/
+        font-family: Campton-LightDEMO;
     }
     .circleBox p.colorTag {
         margin-left:150px;
         margin-bottom:10px;
         margin-top:20px;
         font-size: 18px;
-        /*font-family: Campton-LightDEMO;*/
-        font-family: "Palatino", Times, serif;
+        font-family: Campton-LightDEMO;
+        /*font-family: "Palatino", Times, serif;*/
+        font-family: museoSlab;
     }
     .environment .round {
         border:1px solid #94e3ea;
@@ -362,7 +357,7 @@
     span.pageTitleMain {
         text-transform: uppercase;
         font-family:Campton-BoldDEMO;
-        color:#666;
+        color:#4a4a4a;
         font-size:12px;
         letter-spacing:2px;
     }
@@ -406,11 +401,11 @@
 
     @media (min-width: 480px) {
         section {
-            width:65%;
+            width:80%;
             padding:50px 0 0px 60px;
-            font-size:12px;
-            line-height: 22px;
-            color:#666;
+            font-size:17px;
+            line-height: 28px;
+            color:#4a4a4a;
         }
         .pageTitle {
             width:65%;
@@ -421,7 +416,7 @@
     }
     @media (min-width: 650px) {
         #slideShowTitle span { 
-            font-size:24px;
+            font-size:30px;
         }
         #slideShowTitle {
             bottom: 20px;
@@ -496,7 +491,7 @@
         position: fixed;
         z-index: 99999;
         background-color: #fff;
-        border-bottom: 1px solid #aeaeae;
+        /*border-bottom: 1px solid #aeaeae;*/
         width: 100%;
         height:60px;
         display: block
@@ -522,9 +517,9 @@
     #smallNavigation .pageLinks {
         clear:both;
         width: 100%;
-        text-align: center;
-        margin:20px 0 0 0;
-        border-bottom:1px solid #aeaeae;
+        text-align: left;
+        margin:20px 0 0 15px;
+        /*border-bottom:1px solid #aeaeae;*/
         padding-bottom:20px;
     }
     #topSmallNav {
@@ -571,9 +566,10 @@
         .asmart, .aurora, .achoice, .bestrong {margin-right:1.2%;}
         .selectionBoxTitle {
             color:#999;
-            font-size:10px;
+            font-size:12px;
             text-transform: uppercase;
             text-align: center;
+            padding-top:5px;
         }
 
         .featuresContainer {
@@ -588,14 +584,14 @@
             margin-left:10%;
             font-size:12px;
             line-height: 22px;
-            color:#666;
+            color:#4a4a4a;
             text-align: center;
             padding:15px 0 30px 0;
         }
         .featuresContainer p.pageTitleMain {
             text-transform: uppercase;
             font-family:Campton-BoldDEMO;
-            color:#666;
+            color:#4a4a4a;
             font-size:12px;
             letter-spacing:2px;
             text-align: center;
@@ -626,7 +622,7 @@
         }
         .featuresContainerChart .left p {
             font-family:Campton-BoldDEMO;
-            color:#444;
+            color:#4a4a4a;
         }
         .featuresContainerChart .right p {
             font-family:Campton-LightDEMO;
@@ -635,9 +631,9 @@
 
         /* footer.html */
         footer {
-        margin-top:25px;
+        margin-top:150px;
         padding:10px 0;
-        border-top:1px solid #aeaeae;
+        border-top:1px solid #CDCDCD;
     }
     #footerInfo {
         width:100%;
@@ -645,8 +641,8 @@
         margin-bottom:20px;
     }
     footer .pageLinks {font-size:10px;padding:0;}
-    footer img.logo {width:80px;margin-bottom:-12px;margin-left:10px;}
-    .addthis_sharing_toolbox {margin-top:5px;}
+    footer img.logo {width:82px;margin-left:18px;}
+    .addthis_sharing_toolbox {margin-top:15px;}
     @media (min-width: 480px) {
         #footerInfo {
             width:60%;
@@ -654,6 +650,14 @@
         }
         footer .pageLinks {font-size:12px;padding:0 10px;}
     }
+
+    .cycSectionTitle {
+        font-size: 28px;
+        font-family: museoSlab;
+        margin-bottom:14px;
+    }
+    .email {text-decoration: underline;}
+    .contactInfoP {margin-top:14px;}
 ;
 /**
  * @license
@@ -681,6 +685,7 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
+
 @import url("//hello.myfonts.net/count/2f7bf5");
 
   
@@ -689,3 +694,14 @@
   
 @font-face {font-family: 'Campton-BoldDEMO';src: url('webfonts/2F7BF5_1_0.eot');src: url('webfonts/2F7BF5_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F7BF5_1_0.woff2') format('woff2'),url('webfonts/2F7BF5_1_0.woff') format('woff'),url('webfonts/2F7BF5_1_0.ttf') format('truetype');}
  
+
+@import url("//hello.myfonts.net/count/2f8f71");
+
+  
+@font-face {font-family: 'Campton-Light';src: url('webfonts/2F8F71_0_0.eot');src: url('webfonts/2F8F71_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F8F71_0_0.woff2') format('woff2'),url('webfonts/2F8F71_0_0.woff') format('woff'),url('webfonts/2F8F71_0_0.ttf') format('truetype');}
+ 
+
+@font-face {
+	font-family: 'museoSlab';
+	src: url("webfonts/MuseoSlab-300.otf") format("opentype");
+}
