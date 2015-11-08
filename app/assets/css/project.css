@@ -329,6 +329,7 @@
         color:#999;
         font-size:12px;
         text-transform: uppercase;
+        font-family:Campton-LightDEMO;
     }
     span.pageTitleDivider {
         color:#666;
@@ -534,6 +535,7 @@
             text-transform: uppercase;
             text-align: center;
             padding-top:5px;
+            font-family:Campton-LightDEMO;
         }
 
         .featuresContainer {
