@@ -1,21 +1,37 @@
 $(document).ready(function(){
+	$(function(){
+	    //$('#slideShowCont img').show();
+	});
 	$( '.slideShow2, .patternSlideShow' ).cycle({});
  
 	var windowWidth = $(window).width();
 	var windowHeight = $(window).height();
 
 	if ( windowWidth <= 640 ) {
-    	//$('#mainGallery1').attr('src','./assets/img/mainGallery/Lobby2_640.jpg');
-    	//$('#mainGallery2').attr('src','./assets/img/mainGallery/Hospital_640.jpg');
-    	//$('#mainGallery3').attr('src','./assets/img/mainGallery/Office_640.jpg');
-    	//$('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_640.jpg');
+    	$('#mainGallery1').attr('src','./assets/img/mainGallery/Lobby2_640.jpg');
+    	$('#mainGallery2').attr('src','./assets/img/mainGallery/Hospital_640.jpg');
+    	$('#mainGallery3').attr('src','./assets/img/mainGallery/Office_640.jpg');
+    	$('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_640.jpg');
+
     	$('#cycAmerica .singleImgCont .lazyload').attr('data-src','./assets/img/cycAmerica/cycAmerica_640.jpg');
-  	} else if ( windowWidth > 640 ) {
-	    //$('#mainGallery1').attr('src','./assets/img/mainGallery/Lobby2_1536.jpg');
-	    //$('#mainGallery2').attr('src','./assets/img/mainGallery/Hospital_1536.jpg');
-	    //$('#mainGallery3').attr('src','./assets/img/mainGallery/Office_1536.jpg');
-	    //$('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_1536.jpg');
+
+    	$('#inspirationsGallery1').attr('src','./assets/img/inspiration/inspiration_1b_640.jpg');
+    	$('#inspirationsGallery2').attr('src','./assets/img/inspiration/inspiration_2b_640.jpg');
+    	$('#inspirationsGallery3').attr('src','./assets/img/inspiration/inspiration_3b_640.jpg');
+    	$('#inspirationsGallery4').attr('src','./assets/img/inspiration/inspiration_4b_640.jpg');
+
+  	} else {
+	    $('#mainGallery1').attr('src','./assets/img/mainGallery/Lobby2_1536.jpg');
+	    $('#mainGallery2').attr('src','./assets/img/mainGallery/Hospital_1536.jpg');
+	    $('#mainGallery3').attr('src','./assets/img/mainGallery/Office_1536.jpg');
+	    $('#mainGallery4').attr('src','./assets/img/mainGallery/Retail_1536.jpg');
+
 	    $('#cycAmerica .singleImgCont .lazyload').attr('data-src','./assets/img/cycAmerica/cycAmerica_1536.jpg');
+
+	    $('#inspirationsGallery1').attr('src','./assets/img/inspiration/inspiration_1b.jpg');
+    	$('#inspirationsGallery2').attr('src','./assets/img/inspiration/inspiration_2b.jpg');
+    	$('#inspirationsGallery3').attr('src','./assets/img/inspiration/inspiration_3b.jpg');
+    	$('#inspirationsGallery4').attr('src','./assets/img/inspiration/inspiration_4b.jpg');
 	}
 
 	//var topSmallNavHeight = $('#topSmallNav').height();
