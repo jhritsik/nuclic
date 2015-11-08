@@ -83,8 +83,12 @@
 	}
 	#cycAmerica .singleImgCont .lazyloaded {
 		opacity: 1;
-		transition: opacity 1000ms;
+		transition: opacity 300ms;
 	}
+    .selectionBox .lazyloaded {
+        opacity: 1;
+        transition: opacity 300ms;
+    }
 	/* SLIDESHOW CSS */
 	    html {
         overflow-y: scroll;
@@ -103,6 +107,9 @@
     /* pager */
     .cycle-pager { 
         text-align: right;width: 100%; z-index: 500; position: absolute; bottom: 10px; right:30px; overflow: hidden;
+    }
+    #inspirationsSlidesCont .cycle-pager {
+        bottom:-5px;
     }
     .cycle-pager span { 
         font-family: arial; font-size: 30px; width: 16px; height: 16px; 
@@ -190,7 +197,8 @@
         z-index: 999;
         bottom: 10px;
         margin-bottom: 50px;
-        margin-left: 5%;
+        /*margin-left: 5%;*/
+        margin-left: 65%;
         color:white;
         letter-spacing: 1px;
     }
@@ -199,6 +207,11 @@
         font-family: museoSlab;
         font-size:18px;
     }
+    /*
+    #slideShowCont img { display: none }
+    #slideShowCont img.first { display: block }
+    */
+
     .circles {
         width:130%;
         overflow: auto;
