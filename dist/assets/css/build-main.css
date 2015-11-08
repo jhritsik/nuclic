@@ -51,6 +51,12 @@
 	font-family: 'museoSlab';
 	src: url("webfonts/MuseoSlab-300.otf") format("opentype");
 };
+
+
+@font-face {
+	font-family: 'museoSlab';
+	src: url("webfonts/MuseoSlab-300.otf") format("opentype");
+};
 	/* ------ !!!!!! VERY IMPORTANT PLEASE READ !!!!!! ------ */
 	/* ------
 		  PLEASE NOTE: BUILDING FOR MOBILE FIRST
@@ -66,7 +72,7 @@
 	p { margin:0;padding:0; }
 	
 	.fontLight {
-        /*font-family:Campton-LightDEMO;*/
+        font-family:Campton-LightDEMO;
     }
     .fontBold {
         font-family:Campton-BoldDEMO;
