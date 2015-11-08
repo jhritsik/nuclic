@@ -46,7 +46,7 @@
 # Allow access from all domains for web fonts
 
 <IfModule mod_headers.c>
-    <FilesMatch "\.(eot|otf|ttc|ttf|woff)$">
+    <FilesMatch "\.(eot|otf|ttc|ttf|woff|woff2)$">
         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
 </IfModule>
@@ -142,6 +142,7 @@ ErrorDocument 404 /404.html
     AddType application/vnd.ms-fontobject                eot
     AddType application/x-font-truetype                  ttf
     AddType application/font-woff                        woff
+    AddType application/font-woff2                       woff2
     AddType application/x-font-opentype                  otf
 
     # Browsers usually ignore the font MIME types and sniff the content,
@@ -149,6 +150,8 @@ ErrorDocument 404 /404.html
     # following fonts.
     AddType application/x-font-ttf                      ttc ttf
     AddType font/opentype                               otf
+    AddType application/x-font-opentype                 otf
+    AddType application/font-woff                       woff
 
     # Make SVGZ fonts work on iPad:
     # https://twitter.com/FontSquirrel/status/14855840545
