@@ -1,0 +1,48 @@
+	/* ------ !!!!!! VERY IMPORTANT PLEASE READ !!!!!! ------ */
+	/* ------
+		  PLEASE NOTE: BUILDING FOR MOBILE FIRST
+		  - SMALL STYLES HAVE NO MEDIA QUERIES  
+		  - ANY STYLE CHANGES FOR 480 AND ABOVE = MEDIA QUERIES
+	-----*/
+
+	body, html	{ margin:0px; padding:0px; font-family: Verdana, Geneva, sans-serif;background-color: #f2f2f2}
+	#app, body	{max-width: 1200px;border-right:0px solid #aeaeae;border-left:0px solid #aeaeae;margin: auto; }
+	#app {background-color: white;}
+	a { text-decoration: none; }
+	a:link, a:visited { color: #333; }
+	p { margin:0;padding:0; }
+	
+	.fontLight {
+        font-family:Campton-LightDEMO;
+    }
+    .fontBold {
+        font-family:Campton-BoldDEMO;
+    }
+	.allCaps {
+		text-transform: uppercase;
+	}
+	.pageLinks 							{ text-transform: uppercase; font-size: 14px; font-family: Campton-boldDEMO, "pragmatica-web", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif; margin-right: 20px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+	.pageLinks a, .pageLinks a:visited 	{ text-decoration: none; border-bottom: 0}
+    .page1 .pageLinks.page1 a,
+    .page2 .pageLinks.page2 a,
+    .page3 .pageLinks.page3 a,
+    .page4 .pageLinks.page4 a,
+    .page5 .pageLinks.page5 a,
+    .page6 .pageLinks.page6 a,
+    .page7 .pageLinks.page7 a 			{ border-bottom: 1px solid black; font-weight: bold;}
+
+/* ------ BEGIN MEDIA QUERIES ------ */
+/* ------ TRY TO BE SPARING WITH THESE ------ */
+
+	@media (min-width: 480px) {
+	}
+   /* @media (min-width: 550px) {*/
+   	@media (min-width: 570px) {
+
+	}
+	@media (min-width: 748px) {
+
+	}
+	@media (min-width: 960px) {
+	}
+
