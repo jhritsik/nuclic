@@ -101,6 +101,23 @@
 	@media (min-width: 960px) {
 	}
 
+	/* adding museo slab */
+	/* first for IE 4–8 */
+	@font-face {
+	  font-family: MuseoSlab500;
+	  src: url("Museo_Slab_500Web.eot");
+	}
+
+	/* then for WOFF-capable browsers */
+	@font-face {
+	  font-family: MuseoSlab500;
+	  src: url("Museo_Slab_500Web.woff") format("woff");
+	}
+
+	/* go on with normal style definitions */
+	body { 
+	  font-family: MuseoSlab500, sans-serif;
+	}
 ;
 /* ------ BEGIN HEADER ------ */
 	header { 
@@ -259,7 +276,7 @@
     }
     #slideShowTitle span { 
         /*font-family: "Palatino", Times, serif;*/
-        font-family: museoSlab;
+        font-family: MuseoSlab500;
         font-size:18px;
     }
     /*
@@ -335,15 +352,17 @@
         font-size: 18px;
         font-family: Campton-LightDEMO;
         /*font-family: "Palatino", Times, serif;*/
-        font-family: museoSlab;
+        font-family: MuseoSlab500;
+    }
+    .round img {
+        width:130px;
     }
     .environment .round {
         border:1px solid #94e3ea;
         opacity: 0.4;
     }
     .environment .round img {
-        width:137px;
-        margin-left:-25px;
+        
     }
     .environment p.colorTag {
         color:#94e3ea;
@@ -357,8 +376,7 @@
         opacity: 0.5;
     }
     .maintenance .round img {
-        width:134px;
-        margin-top:22px;
+        
     }
     .maintenance p.colorTag {
         color:#94e9c8;
@@ -371,9 +389,7 @@
         opacity: 0.4;
     }
     .durable .round img {
-        width:98px;
-        margin-top:5px;
-        margin-left:20px;
+        
     }
     .durable p.colorTag {
         color:#636363;
@@ -387,9 +403,7 @@
         opacity: 0.4;
     }
     .safe .round img {
-        width:155px;
-        margin-top:-15px;
-        margin-left:-10px;
+        
     }
     .safe p.colorTag {
         color: #f1bf66;
@@ -723,7 +737,7 @@
 
     .cycSectionTitle {
         font-size: 28px;
-        font-family: museoSlab;
+        font-family: MuseoSlab500;
         margin-bottom:14px;
     }
     .email {text-decoration: underline;}
