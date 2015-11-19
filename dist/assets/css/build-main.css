@@ -101,18 +101,7 @@
 	@media (min-width: 960px) {
 	}
 
-	/* adding museo slab */
-	/* first for IE 4–8 */
-	@font-face {
-	  font-family: MuseoSlab500;
-	  src: url("Museo_Slab_500Web.eot");
-	}
 
-	/* then for WOFF-capable browsers */
-	@font-face {
-	  font-family: MuseoSlab500;
-	  src: url("Museo_Slab_500Web.woff") format("woff");
-	}
 
 ;
 /* ------ BEGIN HEADER ------ */
