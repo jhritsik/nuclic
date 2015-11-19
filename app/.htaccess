@@ -502,6 +502,7 @@ AddDefaultCharset utf-8
                                       application/vnd.ms-fontobject \
                                       application/x-font-ttf \
                                       application/x-font-woff \
+                                      application/x-woff \
                                       application/font-woff \
                                       application/font-woff2 \
                                       application/x-web-app-manifest+json \
