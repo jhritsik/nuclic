@@ -114,10 +114,6 @@
 	  src: url("Museo_Slab_500Web.woff") format("woff");
 	}
 
-	/* go on with normal style definitions */
-	body { 
-	  font-family: MuseoSlab500, sans-serif;
-	}
 ;
 /* ------ BEGIN HEADER ------ */
 	header { 
