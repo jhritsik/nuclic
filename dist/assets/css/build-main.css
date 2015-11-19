@@ -272,7 +272,7 @@
     }
     #slideShowTitle span { 
         /*font-family: "Palatino", Times, serif;*/
-        font-family: museoSlab;
+        font-family: MuseoSlab500;
         font-size:18px;
     }
     /*
@@ -348,7 +348,7 @@
         font-size: 18px;
         font-family: Campton-LightDEMO;
         /*font-family: "Palatino", Times, serif;*/
-        font-family: museoSlab;
+        font-family: MuseoSlab500;
     }
     .round img {
         width:130px;
@@ -733,7 +733,7 @@
 
     .cycSectionTitle {
         font-size: 28px;
-        font-family: museoSlab;
+        font-family: MuseoSlab500;
         margin-bottom:14px;
     }
     .email {text-decoration: underline;}
