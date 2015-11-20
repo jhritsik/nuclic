@@ -92,15 +92,15 @@ $(document).ready(function(){
 		});
 		$('.navigation .page3').click(function(){
 			//$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
-			$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#inspirations').offset().top + (-20) }, 1000);
 		});
 		$('.navigation .page4').click(function(){
 			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
-			$("html, body").animate({scrollTop: $('#collections').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#collections').offset().top + (-20) }, 1000);
 		});
 		$('.navigation .page5').click(function(){
 			//$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
-			$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-60) }, 1000);
+			$("html, body").animate({scrollTop: $('#cycAmerica').offset().top + (-20) }, 1000);
 		});
 
 

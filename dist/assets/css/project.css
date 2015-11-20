@@ -621,3 +621,9 @@
     }
     .email {text-decoration: underline;}
     .contactInfoP {margin-top:14px;}
+
+    @media (min-width: 480px) {
+        #features, #inspirations, #cycAmerica {
+            margin-top:200px;
+        }      
+    }
