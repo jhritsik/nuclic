@@ -149,10 +149,18 @@
 	    opacity: 1;
 	    transition: opacity 300ms;
 	}
+    #cycAmerica .singleImgCont {
+        width:90%;
+        margin:0 auto;
+    }
+    #cycAmerica .singleImgCont img {
+        width:100%;
+    }
 	#cycAmerica .singleImgCont .lazyloaded {
 		opacity: 1;
 		transition: opacity 300ms;
 	}
+
     .selectionBox .lazyloaded {
         opacity: 1;
         transition: opacity 300ms;
