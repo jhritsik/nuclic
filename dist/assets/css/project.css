@@ -398,7 +398,7 @@
 
         #inspirations, #collections, #cycAmerica {
 			display:block;
-			overflow:auto;
+			/*overflow:auto;*/
 		}
         .insideCircleBox {
             margin-left:20%;
@@ -626,6 +626,7 @@
         font-size: 28px;
         font-family: MuseoSlab500;
         margin-bottom:14px;
+        line-height: 30px;
     }
     .email {text-decoration: underline;}
     .contactInfoP {margin-top:14px;}
